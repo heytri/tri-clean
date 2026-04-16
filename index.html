@@ -6,9 +6,9 @@
     <title>Hey Tri Cleans • Professional Cleaning in Peckham, Dulwich & Camberwell</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
     <style>
         .service-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             min-height: 360px;
             display: flex;
             flex-direction: column;
@@ -17,10 +17,6 @@
             .service-card {
                 min-height: 440px;
             }
-        }
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
         .carousel-container {
             scroll-behavior: smooth;
@@ -46,432 +42,148 @@
         #mobile-menu {
             transition: all 0.3s ease;
         }
-
-        /* Mobile-first improvements */
         @media (max-width: 767px) {
             .hero-title {
                 font-size: 2.75rem !important;
-                line-height: 1.1;
-            }
-            .service-card h3 {
-                font-size: 1.35rem !important;
             }
             .section-heading {
                 font-size: 2.25rem !important;
             }
         }
-
-        /* Hero image improvements */
         .hero-bg {
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
+
 <body class="bg-white font-sans">
-    <!-- NAVBAR -->
-    <nav class="bg-white shadow sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <!-- Logo -->
-            <div class="flex items-center gap-3">
-                <div class="flex items-center gap-3">
-                    <div class="w-11 h-11 bg-gradient-to-br from-orange-400 to-pink-400 rounded-3xl flex items-center justify-center text-white text-3xl shadow-md">✨</div>
-                    <div class="flex flex-col -space-y-1">
-                        <span class="logo-accent text-4xl text-orange-500 tracking-tight">Tri</span>
-                        <span class="logo-font text-3xl font-bold text-gray-800">Cleans</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Desktop & Tablet Menu -->
-            <div class="hidden md:flex gap-8 text-gray-700 font-medium">
-                <a href="#services" class="hover:text-orange-600">Services</a>
-                <a href="#reviews" class="hover:text-orange-600">Reviews</a>
-                <a href="#about" class="hover:text-orange-600">About Me</a>
-                <a href="#videos" class="hover:text-orange-600">Videos</a>
-            </div>
-            <!-- WhatsApp button – visible only on md and larger -->
-            <div class="hidden md:block">
-                <a href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20would%20like%20to%20book%20a%20clean%20with%20you" target="_blank" class="whatsapp-green text-white px-8 py-3 rounded-2xl font-semibold flex items-center gap-2 shadow-md">
-                    <i class="fab fa-whatsapp text-xl"></i>
-                    Book on WhatsApp
-                </a>
-            </div>
-            <!-- Hamburger for mobile only -->
-            <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden text-3xl text-gray-700 hover:text-orange-600 transition-colors p-2">
-                <i class="fas fa-bars"></i>
-            </button>
+
+<!-- NAVBAR -->
+<nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+
+        <!-- GEN Z LOGO -->
+        <div class="text-2xl md:text-3xl font-semibold tracking-tight text-gray-900">
+            <span class="text-orange-500">hey__tri</span> <span class="font-light">cleans</span>
         </div>
 
-        <!-- MOBILE MENU -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-lg">
-            <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-y-2 text-lg font-medium text-gray-700">
-                <a onclick="toggleMobileMenu()" href="#services" class="hover:text-orange-600 py-4 px-2 border-b flex items-center justify-between">
-                    Services
-                    <span class="text-orange-400 text-xl">→</span>
-                </a>
-                <a onclick="toggleMobileMenu()" href="#reviews" class="hover:text-orange-600 py-4 px-2 border-b flex items-center justify-between">
-                    Reviews
-                    <span class="text-orange-400 text-xl">→</span>
-                </a>
-                <a onclick="toggleMobileMenu()" href="#about" class="hover:text-orange-600 py-4 px-2 border-b flex items-center justify-between">
-                    About Me
-                    <span class="text-orange-400 text-xl">→</span>
-                </a>
-                <a onclick="toggleMobileMenu()" href="#videos" class="hover:text-orange-600 py-4 px-2 flex items-center justify-between">
-                    Videos
-                    <span class="text-orange-400 text-xl">→</span>
-                </a>
-            </div>
+        <div class="hidden md:flex gap-8 text-gray-700 font-medium">
+            <a href="#services" class="hover:text-orange-600">Services</a>
+            <a href="#reviews" class="hover:text-orange-600">Reviews</a>
+            <a href="#about" class="hover:text-orange-600">About Me</a>
+            <a href="#videos" class="hover:text-orange-600">Videos</a>
         </div>
-    </nav>
 
-    <!-- HERO – Updated to hold a full-width background image -->
-    <header class="hero-bg relative flex items-center min-h-[620px] md:min-h-[700px]" 
-        style="background-image: url('images/banner.jpeg');">
-        
-        <!-- Dark overlay for perfect text readability on the image -->
-        <div class="absolute inset-0 bg-black/45"></div>
-
-        <!-- Content -->
-        <div class="max-w-4xl mx-auto px-6 text-center relative z-10 py-12 md:py-20 lg:py-28">
-            <h1 class="hero-title text-4xl md:text-6xl lg:text-7xl font-bold mb-6 flex items-center justify-center gap-4 text-white">
-                Hi, I'm Tri <span class="text-5xl md:text-6xl">👋</span>
-            </h1>
-            <p class="text-xl md:text-2xl lg:text-3xl mb-10 text-white max-w-2xl mx-auto">
-                Your friendly local professional cleaner.<br>
-                Spotless homes in Peckham, Dulwich &amp; Camberwell.
-            </p>
-           
-            <!-- WhatsApp button -->
-            <a href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20would%20like%20to%20book%20a%20clean%20with%20you" 
-               target="_blank" 
-               class="whatsapp-green inline-flex items-center justify-center gap-3 text-white text-2xl font-semibold px-10 py-5 rounded-3xl shadow-xl mx-auto hover:scale-105 transition">
-                <i class="fab fa-whatsapp text-4xl"></i>
+        <div class="hidden md:block">
+            <a href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20would%20like%20to%20book%20a%20clean%20with%20you"
+               target="_blank"
+               class="whatsapp-green text-white px-8 py-3 rounded-2xl font-semibold flex items-center gap-2 shadow-md">
+                <i class="fab fa-whatsapp"></i>
                 Book on WhatsApp
             </a>
-           
-            <p class="mt-12 text-base text-white/90">Serving Peckham, Dulwich, Camberwell and surroundings • Residential cleaning from £20/hr</p>
-        </div>
-    </header>
-
-    <!-- ABOUT -->
-    <section id="about" class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-start">
-            <div class="md:col-span-5">
-                <div class="bg-white rounded-3xl shadow-xl p-8">
-                    <img src="images/me.jpeg" alt="Tri" class="w-full rounded-2xl shadow">
-                    <div class="mt-6 text-center">
-                        <h2 class="text-4xl font-bold text-orange-600">Tri</h2>
-                        <p class="text-xl text-gray-600">Founder of Tri Cleans</p>
-                    </div>
-                </div>
-            </div>
-            <div class="md:col-span-7 pt-8">
-                <p class="text-lg leading-relaxed text-gray-700">Hi! I'm Tri, founder of Tri Cleans. I'm a professional domestic cleaner in South East London. I offer reliable residential cleaning from £20 per hour across Peckham, Dulwich and Camberwell.</p>
-                <p class="mt-6 text-lg text-gray-700">No agencies, no hassle — just one trusted local person who cleans to a high standard and takes the stress out of hosting.</p>
-               
-                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-2xl shadow flex items-start gap-4">
-                        <div class="text-3xl">✅</div>
-                        <div>
-                            <p class="font-semibold">Identity &amp; qualifications checked</p>
-                            <p class="text-sm text-gray-600">Background checked</p>
-                        </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow flex items-start gap-4">
-                        <div class="text-3xl">✅</div>
-                        <div>
-                            <p class="font-semibold">Secure &amp; easy booking</p>
-                            <p class="text-sm text-gray-600">Message me on WhatsApp, payment after the clean</p>
-                        </div>
-                    </div>
-                </div>
-               
-                <a href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20would%20like%20to%20book%20a%20clean%20with%20you" target="_blank" class="whatsapp-green hover:bg-[#20ba5a] mt-10 block w-full text-white text-center py-5 rounded-2xl text-xl font-semibold">
-                    Book on WhatsApp
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICES CAROUSEL – Improved for mobile -->
-    <section id="services" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="section-heading text-4xl font-bold text-center mb-4">Our Popular Cleaning Services</h2>
-            <p class="text-center text-xl text-gray-600 mb-12">Reliable, friendly cleaning in Peckham, Dulwich &amp; Camberwell</p>
-           
-            <div class="relative px-4 md:px-12">
-                <!-- Carousel -->
-                <div id="carousel" class="carousel-container flex gap-6 md:gap-8 overflow-x-auto pb-12 snap-x snap-mandatory">
-                    <div class="service-card min-w-[280px] md:min-w-[300px] bg-white rounded-3xl shadow overflow-hidden snap-center flex flex-col">
-                        <img src="images/hover.jpeg" alt="Weekly Regular Cleaning" class="w-full h-48 md:h-64 object-cover flex-shrink-0">
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-2xl font-semibold">Weekly Regular Cleaning</h3>
-                            <p class="text-gray-600 mt-2 flex-1">Keep your home fresh and tidy every week</p>
-                            <p class="price-tag mt-4">£20/hr • 2–3 hrs minimum</p>
-                        </div>
-                    </div>
-                    <div class="service-card min-w-[280px] md:min-w-[300px] bg-white rounded-3xl shadow overflow-hidden snap-center flex flex-col">
-                        <img src="images/window.jpeg" alt="Fortnightly Regular Cleaning" class="w-full h-48 md:h-64 object-cover flex-shrink-0">
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-2xl font-semibold">Fortnightly Regular Cleaning</h3>
-                            <p class="text-gray-600 mt-2 flex-1">Every two weeks – great value for busy homes</p>
-                            <p class="price-tag mt-4">£21/hr • 3 hrs minimum</p>
-                        </div>
-                    </div>
-                    <div class="service-card min-w-[280px] md:min-w-[300px] bg-white rounded-3xl shadow overflow-hidden snap-center flex flex-col">
-                        <img src="images/kitchen.jpeg" alt="One-off Cleaning" class="w-full h-48 md:h-64 object-cover flex-shrink-0">
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-2xl font-semibold">One-off Cleaning</h3>
-                            <p class="text-gray-600 mt-2 flex-1">Move-in, move-out, or special occasions</p>
-                            <p class="price-tag mt-4">£25/hr • 3 hrs minimum</p>
-                        </div>
-                    </div>
-                    <div class="service-card min-w-[280px] md:min-w-[300px] bg-white rounded-3xl shadow overflow-hidden snap-center flex flex-col">
-                        <img src="images/bathroom.jpeg" alt="End of Tenancy Cleaning" class="w-full h-48 md:h-64 object-cover flex-shrink-0">
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-2xl font-semibold">End of Tenancy Cleaning</h3>
-                            <p class="text-gray-600 mt-2 flex-1">Thorough deep clean to help you get your full deposit back</p>
-                            <p class="price-tag mt-4">From £220 (typical 1–2 bed) • Quote based on property size</p>
-                        </div>
-                    </div>
-                    <div class="service-card min-w-[280px] md:min-w-[300px] bg-white rounded-3xl shadow overflow-hidden snap-center flex flex-col">
-                        <img src="images/airbnb.jpeg" alt="Airbnb Turnover Cleaning" class="w-full h-48 md:h-64 object-cover flex-shrink-0">
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-2xl font-semibold">Airbnb Turnover Cleaning</h3>
-                            <p class="text-gray-600 mt-2 flex-1">Hotel-standard turnover for short-term rentals</p>
-                            <p class="price-tag mt-4">£80–£90 flat (1–2 bed)</p>
-                        </div>
-                    </div>
-                    <div class="service-card min-w-[280px] md:min-w-[300px] bg-white rounded-3xl shadow overflow-hidden snap-center flex flex-col">
-                        <img src="images/iron.jpeg" alt="Ironing Service" class="w-full h-48 md:h-64 object-cover flex-shrink-0">
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-2xl font-semibold">Ironing Service</h3>
-                            <p class="text-gray-600 mt-2 flex-1">Freshly pressed clothes delivered with care</p>
-                            <p class="price-tag mt-4">Add-on from £15 per load</p>
-                        </div>
-                    </div>
-                    <div class="service-card min-w-[280px] md:min-w-[300px] bg-white rounded-3xl shadow overflow-hidden snap-center flex flex-col">
-                        <img src="images/mop.jpeg" alt="Same Day / Emergency Cleaning" class="w-full h-48 md:h-64 object-cover flex-shrink-0">
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-2xl font-semibold">Same Day / Emergency Cleaning</h3>
-                            <p class="text-gray-600 mt-2 flex-1">Quick response when you need it fast</p>
-                            <p class="price-tag mt-4">£28/hr (subject to availability)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Desktop arrows only -->
-                <button onclick="scrollCarousel(-320)" class="absolute left-[-25px] top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-orange-50 text-orange-600 p-4 rounded-full text-2xl z-20 hidden md:block">←</button>
-                <button onclick="scrollCarousel(320)" class="absolute right-[-25px] top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-orange-50 text-orange-600 p-4 rounded-full text-2xl z-20 hidden md:block">→</button>
-            </div>
-
-            <!-- MOBILE CAROUSEL INDICATOR -->
-            <div class="md:hidden flex justify-center mt-6 text-orange-500 font-medium items-center gap-3">
-                <span class="text-2xl">👈</span>
-                <span class="text-sm tracking-widest uppercase">SWIPE TO SEE ALL SERVICES</span>
-                <span class="text-2xl">👉</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- BENEFITS -->
-    <section class="py-20 bg-orange-50">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="section-heading text-4xl font-bold text-center mb-12">You're going to love working with Tri Cleans</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-3xl shadow text-center">
-                    <div class="text-5xl mb-4">⚡</div>
-                    <h3 class="text-2xl font-semibold mb-3">Efficient</h3>
-                    <p class="text-gray-600">No agencies – just reliable, high-quality cleaning done right.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl shadow text-center">
-                    <div class="text-5xl mb-4">🔄</div>
-                    <h3 class="text-2xl font-semibold mb-3">Flexible</h3>
-                    <p class="text-gray-600">Change, cancel or reschedule easily to fit your schedule.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl shadow text-center">
-                    <div class="text-5xl mb-4">💰</div>
-                    <h3 class="text-2xl font-semibold mb-3">Accessible</h3>
-                    <p class="text-gray-600">Fair pricing and easy WhatsApp booking – no hassle.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- GOOGLE REVIEWS -->
-    <section id="reviews" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="section-heading text-4xl font-bold mb-3">What my clients say</h2>
-                <p class="text-xl text-gray-600">Real Google reviews from homeowners in the area</p>
-                <div class="flex justify-center items-center gap-2 mt-4 text-3xl review-stars">★★★★★ <span class="text-gray-600 text-lg ml-3">(4.9 average rating)</span></div>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="review-card bg-white border border-gray-100 p-8 rounded-3xl shadow">
-                    <div class="review-stars text-2xl mb-4">★★★★★</div>
-                    <p class="text-gray-700 italic">"Tri cleaned my Peckham flat to perfection. Spotless every time and so reliable. My home has never looked better!"</p>
-                    <div class="mt-6 flex items-center gap-3">
-                        <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-semibold">NT</div>
-                        <div>
-                            <p class="font-semibold">Nick Taylor</p>
-                            <p class="text-sm text-gray-500">Peckham • March 2026</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="review-card bg-white border border-gray-100 p-8 rounded-3xl shadow">
-                    <div class="review-stars text-2xl mb-4">★★★★★</div>
-                    <p class="text-gray-700 italic">"Regular weekly clean plus occasional deep cleans. Tri is always on time, thorough and friendly. My home stays spotless week after week — highly recommend!"</p>
-                    <div class="mt-6 flex items-center gap-3">
-                        <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-semibold">L</div>
-                        <div>
-                            <p class="font-semibold">Len</p>
-                            <p class="text-sm text-gray-500">Dulwich • February 2026</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="review-card bg-white border border-gray-100 p-8 rounded-3xl shadow">
-                    <div class="review-stars text-2xl mb-4">★★★★★</div>
-                    <p class="text-gray-700 italic">"Moved into a messy rental and Tri did an amazing one-off deep clean. She's now my go-to cleaner. Professional, kind and does what she says every time."</p>
-                    <div class="mt-6 flex items-center gap-3">
-                        <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-semibold">A</div>
-                        <div>
-                            <p class="font-semibold">Indi</p>
-                            <p class="text-sm text-gray-500">Camberwell • 1 week ago</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PAYMENT METHODS -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="section-heading text-4xl font-bold text-center mb-4">Payment Methods</h2>
-            <p class="text-center text-xl text-gray-600 mb-12">Flexible options – payment taken after the clean</p>
-            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                <div class="payment-card bg-white p-8 rounded-3xl shadow text-center">
-                    <i class="fas fa-money-bill-wave text-6xl text-emerald-600 mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-2">Cash</h3>
-                    <p class="text-gray-600">Pay in cash on the day</p>
-                </div>
-                <div class="payment-card bg-white p-8 rounded-3xl shadow text-center">
-                    <i class="fas fa-money-bill-transfer text-6xl text-blue-600 mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-2">Bank Transfer</h3>
-                    <p class="text-gray-600">Quick BACS or instant transfer</p>
-                </div>
-                <div class="payment-card bg-white p-8 rounded-3xl shadow text-center">
-                    <i class="fab fa-bitcoin text-6xl text-orange-500 mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-2">Bitcoin</h3>
-                    <p class="text-gray-600">Pay with BTC – modern &amp; secure</p>
-                </div>
-            </div>
-            <p class="text-center text-sm text-gray-500 mt-10">Choose whichever method works best for you</p>
-        </div>
-    </section>
-
-
-
-    <!-- VIDEOS -->
-<section id="videos" class="py-20 bg-white">
-    <div class="max-w-xs mx-auto px-4">
-        <h2 class="section-heading text-3xl font-bold text-center mb-8">See me in action</h2>
-        
-        <div class="bg-white rounded-3xl overflow-hidden shadow">
-            <div class="relative pb-[177.78%] max-h-[500px]">
-                <iframe 
-                    class="absolute top-0 left-0 w-full h-full rounded-t-3xl"
-                    src="https://www.tiktok.com/embed/7629418392151264534"
-                    frameborder="0"
-                    allowfullscreen>
-                </iframe>
-            </div>
-            <div class="p-3">
-                <p class="font-medium text-xs text-center">Watch my latest clean</p>
-            </div>
         </div>
 
-        <!-- SOCIAL LINKS -->
-        <div class="flex justify-center gap-10 mt-12 text-2xl text-gray-700">
-            <a href="https://www.tiktok.com/@hey__tri" target="_blank" class="hover:text-orange-600">
-                <i class="fab fa-tiktok"></i>
-            </a>
-            <a href="YOUR-YOUTUBE-LINK" target="_blank" class="hover:text-orange-600">
-                <i class="fab fa-youtube"></i>
-            </a>
-            <a href="YOUR-INSTAGRAM-LINK" target="_blank" class="hover:text-orange-600">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://x.com/hey__tri" target="_blank" class="hover:text-orange-600">
-                <i class="fab fa-x-twitter"></i>
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden text-3xl text-gray-700 p-2">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero-bg relative flex items-center min-h-[620px]" style="background-image: url('images/banner.jpeg');">
+    <div class="absolute inset-0 bg-black/45"></div>
+
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10 py-20">
+        <h1 class="hero-title text-4xl md:text-6xl font-bold mb-6 text-white">
+            hi, i'm tri 👋
+        </h1>
+        <p class="text-xl md:text-2xl mb-10 text-white">
+            your friendly local professional cleaner
+        </p>
+
+        <a href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20would%20like%20to%20book%20a%20clean%20with%20you"
+           target="_blank"
+           class="whatsapp-green inline-flex items-center gap-3 text-white text-xl px-10 py-5 rounded-3xl">
+            <i class="fab fa-whatsapp"></i>
+            Book on WhatsApp
+        </a>
+    </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+        <img src="images/me.jpeg" class="rounded-2xl shadow">
+
+        <div>
+            <p class="text-lg text-gray-700">
+                Hi! I'm Tri, founder of Tri Cleans. I offer reliable residential cleaning in South East London.
+            </p>
+
+            <a href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20would%20like%20to%20book%20a%20clean%20with%20you"
+               class="whatsapp-green mt-10 w-full text-white text-center py-5 rounded-2xl text-xl font-semibold flex items-center justify-center gap-3">
+                <i class="fab fa-whatsapp"></i>
+                Book on WhatsApp
             </a>
         </div>
     </div>
 </section>
 
-
-    <!-- FINAL CTA -->
-    <div class="bg-orange-600 text-white py-16 md:py-20 text-center">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready for a sparkling home?</h2>
-        <a href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20would%20like%20to%20book%20a%20clean%20with%20you" target="_blank" class="whatsapp-green hover:bg-[#20ba5a] inline-flex items-center gap-3 text-xl md:text-3xl text-white px-8 md:px-14 py-5 md:py-7 rounded-3xl font-bold hover:scale-105 transition">
-            <i class="fab fa-whatsapp text-3xl md:text-5xl"></i>
-            Book on WhatsApp
-        </a>
-    </div>
-
-    <!-- FOOTER -->
-    <footer class="bg-gray-900 text-white py-12 text-center">
-        <div class="flex items-center justify-center gap-3 mb-4">
-            <div class="w-10 h-10 bg-gradient-to-br from-orange-400 to-pink-400 rounded-3xl flex items-center justify-center text-white text-3xl shadow-md">✨</div>
-            <div class="flex flex-col -space-y-1">
-                <span class="logo-accent text-4xl text-orange-400">Tri</span>
-                <span class="logo-font text-3xl font-bold text-white">Cleans</span>
+<!-- SERVICES -->
+<section id="services" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div id="carousel" class="carousel-container flex gap-6 overflow-x-auto pb-12">
+            <div class="service-card min-w-[280px] bg-white rounded-3xl shadow p-6">
+                <h3 class="text-xl font-semibold">Weekly Cleaning</h3>
+                <p class="price-tag mt-4">£20/hr</p>
+            </div>
+            <div class="service-card min-w-[280px] bg-white rounded-3xl shadow p-6">
+                <h3 class="text-xl font-semibold">Deep Cleaning</h3>
+                <p class="price-tag mt-4">£25/hr</p>
             </div>
         </div>
-        <p class="mt-2">Professional • Friendly • Local to Peckham, Dulwich &amp; Camberwell</p>
-        <div class="flex justify-center gap-8 mt-8 text-3xl">
-            <a href="https://www.tiktok.com/@hey__tri" target="_blank" class="hover:text-orange-400"><i class="fab fa-tiktok"></i></a>
-            <a href="YOUR-YOUTUBE-LINK" target="_blank" class="hover:text-orange-400"><i class="fab fa-youtube"></i></a>
-            <a href="YOUR-INSTAGRAM-LINK" target="_blank" class="hover:text-orange-400"><i class="fab fa-instagram"></i></a>
-            <a href="https://x.com/hey__tri" target="_blank" class="hover:text-orange-400"><i class="fab fa-x-twitter"></i></a>
+    </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos" class="py-20 bg-white">
+    <div class="max-w-xs mx-auto px-4">
+        <div class="bg-white rounded-3xl overflow-hidden shadow">
+            <div class="relative pb-[177.78%] overflow-hidden">
+                <iframe 
+                    class="absolute top-0 left-0 w-full h-full"
+                    src="https://www.tiktok.com/embed/7629418392151264534"
+                    scrolling="no"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
-        <p class="text-sm mt-10 opacity-60">© 2026 Tri Cleans • Cleaning</p>
-    </footer>
+    </div>
+</section>
 
-    <script>
-        function scrollCarousel(offset) {
-            const carousel = document.getElementById('carousel');
-            carousel.scrollBy({ left: offset, behavior: 'smooth' });
-        }
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            const btn = document.getElementById('mobile-menu-btn');
-            const icon = btn.querySelector('i');
-            menu.classList.toggle('hidden');
-            if (menu.classList.contains('hidden')) {
-                icon.className = 'fas fa-bars';
-            } else {
-                icon.className = 'fas fa-xmark';
-            }
-        }
+<!-- CTA -->
+<div class="bg-orange-600 text-white py-20 text-center">
+    <a href="https://wa.me/447786817644"
+       class="whatsapp-green inline-flex items-center gap-3 px-10 py-5 rounded-3xl text-xl">
+        <i class="fab fa-whatsapp"></i>
+        Book on WhatsApp
+    </a>
+</div>
 
-        // Tailwind config
-        tailwind.config = {
-            content: ["*"],
-            theme: {
-                extend: {
-                    colors: {
-                        orange: {
-                            600: '#ea580c',
-                            700: '#c2410c'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white py-12 text-center">
+    <div class="text-2xl font-semibold tracking-tight">
+        <span class="text-orange-400">hey__tri</span> <span class="font-light">cleans</span>
+    </div>
+</footer>
+
+<script>
+function toggleMobileMenu() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+}
+</script>
+
 </body>
 </html>
