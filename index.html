@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Primary Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hey__tri cleans • Professional Cleaning Services in Peckham, Dulwich & Camberwell | From £20/hr</title>
@@ -10,175 +9,293 @@
     <meta name="keywords" content="cleaner Peckham, cleaning Dulwich, cleaner Camberwell, domestic cleaner South East London, house cleaning SE15, end of tenancy cleaning, Airbnb cleaning London, regular cleaner, deep clean, professional cleaner near me">
     <meta name="author" content="hey__tri cleans">
     <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="7 days">
-
-    <!-- Canonical URL -->
+    <meta name="geo.region" content="GB-ENG">
+    <meta name="geo.placename" content="Peckham, London">
+    <meta name="geo.position" content="51.4741;-0.0693">
     <link rel="canonical" href="https://www.heytricleans.com/">
-
-     <!-- X -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.heytricleans.com/">
     <meta property="twitter:title" content="hey__tri cleans | Professional Cleaning in Peckham, Dulwich & Camberwell">
     <meta property="twitter:description" content="Your friendly local professional cleaner. Spotless homes from £20/hr. Book on WhatsApp today!">
-    <meta property="twitter:image" content="https://www.heytricleans.com/images/og-image.jpg">
     <meta name="twitter:creator" content="@hey__tri">
 
-    <!-- Geo Tags for Local SEO -->
-    <meta name="geo.region" content="GB-ENG">
-    <meta name="geo.placename" content="Peckham, London">
-    <meta name="geo.position" content="51.4741;-0.0693">
-    <meta name="ICBM" content="51.4741, -0.0693">
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
-     <!-- Favicon -->
-     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    
     <style>
-        .service-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            min-height: 360px;
-            display: flex;
-            flex-direction: column;
+        :root {
+            --wa-green: #25D366;
+            --wa-dark: #128C7E;
+            --pink: #ec4899;
+            --pink-deep: #db2777;
+            --violet: #7c3aed;
+            --blue: #2563eb;
+            --radius-card: 20px;
+            --radius-pill: 9999px;
+            --radius-btn: 14px;
         }
-        @media (min-width: 768px) {
-            .service-card {
-                min-height: 440px;
-            }
+
+        * { box-sizing: border-box; }
+
+        /* ── TYPOGRAPHY ── */
+        .tri-font { font-family: 'Dancing Script', cursive; }
+
+        /* ── LOGO ── */
+        .logo-mark {
+            display: inline-flex;
+            align-items: baseline;
+            gap: 0.08em;
+            line-height: 1;
         }
-        .carousel-container {
-            scroll-behavior: smooth;
-            scrollbar-width: none;
+        .logo-mark .l-hey {
+            font-weight: 900;
+            letter-spacing: -0.08em;
+            color: #ec4899;
         }
-        .carousel-container::-webkit-scrollbar {
-            display: none;
+        .logo-mark .l-cleans {
+            font-weight: 700;
+            color: #1f2937;
+            letter-spacing: -0.02em;
         }
-        .whatsapp-green {
-            background-color: #25D366;
-        }
-        .whatsapp-green:hover {
-            background-color: #20ba5a;
-        }
-        .review-stars {
-            color: #f59e0b;
-        }
-        .price-tag {
-            font-size: 1.1rem;
+        footer .logo-mark .l-cleans { color: #fff; }
+        footer .logo-mark .l-hey { color: #f472b6; }
+
+        /* ── NAVBAR ── */
+        nav { background: #fff; }
+        .nav-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4em;
             font-weight: 600;
-            color: #db2777;
+            border-radius: var(--radius-pill);
+            padding: 0.5rem 1.15rem;
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: transform 0.15s, filter 0.15s, box-shadow 0.15s;
+            white-space: nowrap;
         }
-        #mobile-menu {
-            transition: all 0.3s ease;
-        }
-        /* Mobile-first improvements */
-        @media (max-width: 767px) {
-            .hero-title {
-                font-size: 2.75rem !important;
-                line-height: 1.1;
-            }
-            .service-card h3 {
-                font-size: 1.35rem !important;
-            }
-            .section-heading {
-                font-size: 2.25rem !important;
-            }
-        }
-        /* Hero image improvements */
+        .nav-pill:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+        .nav-pill.wa   { background: var(--wa-green); color: #fff; }
+        .nav-pill.cal  { background: var(--violet); color: #fff; }
+
+        /* ── HERO ── */
         .hero-bg {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
-        /* Upgraded Tri typography */
-        .tri-font {
-            font-family: 'Dancing Script', cursive;
-        }
-        /* Inline logo used in text headings */
-        .inline-logo {
-            display: inline-flex;
-            align-items: baseline;
-            gap: 0.1em;
-            line-height: 1;
-        }
-        .inline-logo .logo-hey {
-            font-family: inherit;
-            font-weight: 900;
-            letter-spacing: -0.08em;
-            color: #ec4899;
-        }
-        .inline-logo .logo-cleans {
-            font-family: inherit;
-            font-weight: 700;
-            color: #1f2937;
-            letter-spacing: -0.02em;
-        }
-        .on-pink .inline-logo .logo-cleans {
-            color: #fff;
-        }
-        /* Email link style */
-        .email-link {
+
+        /* ── GENERIC BUTTONS ── */
+        .btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.4em;
-            color: #db2777;
-            font-weight: 500;
+            justify-content: center;
+            gap: 0.6em;
+            font-weight: 700;
+            border-radius: var(--radius-btn);
+            padding: 1rem 2rem;
+            font-size: 1.05rem;
             text-decoration: none;
-            transition: color 0.2s;
+            transition: transform 0.18s cubic-bezier(.4,0,.2,1), box-shadow 0.18s, filter 0.15s;
+            white-space: nowrap;
+            border: none;
+            cursor: pointer;
         }
-        .email-link:hover {
-            color: #9d174d;
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.18); }
+        .btn:active { transform: translateY(0); }
+        .btn.wa    { background: var(--wa-green); color: #fff; }
+        .btn.wa:hover { background: #20ba5a; }
+        .btn.cal   { background: var(--violet); color: #fff; }
+        .btn.cal:hover { background: #6d28d9; }
+        .btn.ghost { background: rgba(255,255,255,0.18); border: 2px solid rgba(255,255,255,0.55); color: #fff; }
+        .btn.ghost:hover { background: rgba(255,255,255,0.28); }
+        .btn.phone { background: var(--blue); color: #fff; }
+        .btn.phone:hover { background: #1d4ed8; }
+
+        /* ── SERVICE CARDS ── */
+        .service-card {
+            min-width: 280px;
+            background: #fff;
+            border-radius: var(--radius-card);
+            box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            snap-align: center;
+            transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s;
+            flex-shrink: 0;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.13);
+        }
+        @media (min-width: 768px) {
+            .service-card { min-width: 300px; }
+        }
+        .service-card img { width: 100%; height: 200px; object-fit: cover; flex-shrink: 0; }
+        @media (min-width: 768px) {
+            .service-card img { height: 240px; }
+        }
+        .service-card .card-body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
+        .service-card .card-body h3 { font-size: 1.2rem; font-weight: 700; color: #111827; }
+        .service-card .card-body p { color: #6b7280; margin-top: 0.4rem; flex: 1; font-size: 0.9rem; }
+        .price-badge {
+            display: inline-block;
+            margin-top: 1rem;
+            background: #fdf2f8;
+            color: var(--pink-deep);
+            border: 1.5px solid #fbcfe8;
+            border-radius: 8px;
+            padding: 0.35rem 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 700;
         }
 
-        /* ── CONTACT CTA PILLS ── */
-        /* Used in About + Final CTA sections for the 4-way contact row */
+        /* ── CAROUSEL ── */
+        .carousel-wrap {
+            overflow-x: auto;
+            display: flex;
+            gap: 1.25rem;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            padding-bottom: 1.5rem;
+            scroll-snap-type: x mandatory;
+        }
+        .carousel-wrap::-webkit-scrollbar { display: none; }
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #fff;
+            border: 1.5px solid #e5e7eb;
+            color: var(--pink-deep);
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-pill);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            z-index: 20;
+            transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .carousel-arrow:hover { background: #fdf2f8; box-shadow: 0 4px 16px rgba(0,0,0,0.14); transform: translateY(-50%) scale(1.05); }
+        .carousel-arrow.left { left: -22px; }
+        .carousel-arrow.right { right: -22px; }
+
+        /* ── BENEFIT CARDS ── */
+        .benefit-card {
+            background: #fff;
+            border-radius: var(--radius-card);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid #f3f4f6;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .benefit-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,0.1); }
+        .benefit-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.25rem;
+            font-size: 1.75rem;
+        }
+
+        /* ── REVIEW CARDS ── */
+        .review-card {
+            background: #fff;
+            border: 1px solid #f0f0f0;
+            border-radius: var(--radius-card);
+            padding: 2rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .review-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,0.1); }
+        .stars { color: #f59e0b; letter-spacing: 2px; }
+
+        /* ── PAYMENT ICONS ── */
+        .payment-card {
+            background: #fff;
+            border-radius: var(--radius-card);
+            padding: 2.25rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid #f3f4f6;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .payment-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,0.1); }
+        .payment-icon-wrap {
+            width: 72px;
+            height: 72px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.25rem;
+        }
+
+        /* ── FAQ ── */
+        details { border: 1.5px solid #e5e7eb; border-radius: var(--radius-card); overflow: hidden; background: #fff; transition: box-shadow 0.2s; }
+        details[open] { box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-color: #fbcfe8; }
+        details summary { list-style: none; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem; font-size: 1.05rem; font-weight: 700; cursor: pointer; color: #111827; transition: background 0.15s; }
+        details summary::-webkit-details-marker { display: none; }
+        details summary:hover { background: #fdf2f8; }
+        details[open] summary { background: #fdf2f8; }
+        details[open] summary { margin-bottom: 1rem; }
+        .faq-chevron { color: var(--pink-deep); transition: transform 0.3s; flex-shrink: 0; margin-left: 1rem; }
+        details[open] .faq-chevron { transform: rotate(180deg); }
+        .faq-body { padding: 0 2rem 2rem; color: #374151; line-height: 1.7; }
+
+        /* ── CTA PILLS (About + footer sections) ── */
         .cta-pill {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 0.55em;
-            font-weight: 600;
-            border-radius: 9999px;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
+            gap: 0.5em;
+            font-weight: 700;
+            border-radius: var(--radius-pill);
+            padding: 0.8rem 1.5rem;
+            font-size: 0.95rem;
             text-decoration: none;
-            transition: transform 0.15s, box-shadow 0.15s, filter 0.15s;
+            transition: transform 0.15s, box-shadow 0.15s;
             white-space: nowrap;
         }
-        .cta-pill:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-        }
-        .cta-pill.wa   { background: #25D366; color: #fff; }
+        .cta-pill:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+        .cta-pill.wa    { background: var(--wa-green); color: #fff; }
         .cta-pill.wa:hover { background: #20ba5a; }
-        .cta-pill.call { background: #2563eb; color: #fff; }
+        .cta-pill.call  { background: var(--blue); color: #fff; }
         .cta-pill.call:hover { background: #1d4ed8; }
-        .cta-pill.cal  { background: #7c3aed; color: #fff; }
+        .cta-pill.cal   { background: var(--violet); color: #fff; }
         .cta-pill.cal:hover { background: #6d28d9; }
-        .cta-pill.email{ background: #f3f4f6; color: #374151; border: 1.5px solid #e5e7eb; }
-        .cta-pill.email:hover { background: #fff; }
+        .cta-pill.email { background: #f9fafb; color: #374151; border: 1.5px solid #e5e7eb; }
+        .cta-pill.email:hover { background: #fff; border-color: #d1d5db; }
 
-        /* Smaller pill variant for navbar */
-        .nav-cta-pill {
+        /* ── TRUST BADGES ── */
+        .trust-chip {
             display: inline-flex;
             align-items: center;
-            gap: 0.4em;
+            gap: 0.5em;
+            background: #fff;
+            border: 1.5px solid #e5e7eb;
+            border-radius: var(--radius-pill);
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            border-radius: 9999px;
-            padding: 0.5rem 1.1rem;
-            font-size: 0.9rem;
-            text-decoration: none;
-            transition: transform 0.15s, filter 0.15s;
-            white-space: nowrap;
+            color: #374151;
         }
-        .nav-cta-pill:hover { transform: translateY(-1px); }
-        .nav-cta-pill.wa   { background: #25D366; color: #fff; }
-        .nav-cta-pill.wa:hover { background: #20ba5a; }
-        .nav-cta-pill.cal  { background: #7c3aed; color: #fff; }
-        .nav-cta-pill.cal:hover { background: #6d28d9; }
 
-        /* WHATSAPP CHAT WIDGET */
+        /* ── MOBILE NAV ── */
+        #mobile-menu { transition: all 0.3s ease; }
+
+        /* ── WA WIDGET ── */
         #wa-widget {
             position: fixed;
             bottom: 24px;
@@ -193,807 +310,668 @@
             width: 320px;
             background: #fff;
             border-radius: 20px;
-            box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+            box-shadow: 0 12px 48px rgba(0,0,0,0.18);
             overflow: hidden;
             display: none;
             flex-direction: column;
             animation: slideUp 0.25s ease;
         }
-        #wa-chat-box.open {
-            display: flex;
-        }
+        #wa-chat-box.open { display: flex; }
         @keyframes slideUp {
             from { opacity: 0; transform: translateY(16px); }
             to   { opacity: 1; transform: translateY(0); }
         }
         #wa-chat-header {
-            background: #25D366;
+            background: var(--wa-green);
             padding: 16px 18px;
             display: flex;
             align-items: center;
             gap: 12px;
         }
-        #wa-chat-header .avatar {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
+        .wa-avatar {
+            width: 44px; height: 44px; border-radius: 50%;
             background: rgba(255,255,255,0.25);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            font-weight: 700;
-            color: #fff;
-            flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px; font-weight: 700; color: #fff; flex-shrink: 0;
         }
-        #wa-chat-header .info p { margin: 0; }
-        #wa-chat-header .info .name { font-weight: 700; color: #fff; font-size: 15px; }
-        #wa-chat-header .info .status { color: rgba(255,255,255,0.85); font-size: 12px; }
-        #wa-chat-body {
-            background: #f0f2f5;
-            padding: 16px;
-            min-height: 100px;
+        .wa-name { font-weight: 700; color: #fff; font-size: 15px; margin: 0; }
+        .wa-status { color: rgba(255,255,255,0.85); font-size: 12px; margin: 0; }
+        #wa-close-btn {
+            background: none; border: none; color: rgba(255,255,255,0.8);
+            cursor: pointer; font-size: 18px; margin-left: auto; padding: 0 0 0 8px; line-height: 1;
         }
+        #wa-close-btn:hover { color: #fff; }
+        #wa-chat-body { background: #f0f2f5; padding: 16px; }
         .wa-bubble {
-            background: #fff;
-            border-radius: 0 12px 12px 12px;
-            padding: 10px 14px;
-            font-size: 14px;
-            line-height: 1.5;
-            color: #333;
-            max-width: 90%;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-            margin-bottom: 8px;
+            background: #fff; border-radius: 0 12px 12px 12px;
+            padding: 10px 14px; font-size: 14px; line-height: 1.55; color: #222;
+            max-width: 90%; box-shadow: 0 1px 4px rgba(0,0,0,0.08);
         }
-        .wa-bubble .time {
-            font-size: 11px;
-            color: #999;
-            text-align: right;
-            margin-top: 4px;
+        .wa-time { font-size: 11px; color: #999; text-align: right; margin-top: 4px; }
+        .wa-btns { padding: 10px 14px 14px; background: #f0f2f5; display: flex; flex-direction: column; gap: 7px; }
+        .wa-section-label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #aaa; padding: 4px 0 2px; }
+        .wa-btn {
+            border-radius: 20px; padding: 8px 14px; font-size: 13px; font-weight: 600;
+            cursor: pointer; text-align: center; transition: background 0.2s, color 0.2s;
+            text-decoration: none; display: block;
         }
-        .wa-quick-btns {
-            padding: 12px 16px 16px;
-            background: #f0f2f5;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        .wa-quick-btn {
-            background: #fff;
-            border: 1.5px solid #25D366;
-            color: #128C7E;
-            border-radius: 20px;
-            padding: 8px 14px;
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            text-align: center;
-            transition: background 0.2s, color 0.2s;
-            text-decoration: none;
-            display: block;
-        }
-        .wa-quick-btn:hover {
-            background: #25D366;
-            color: #fff;
-        }
-        /* Call button style in widget */
-        .wa-call-btn {
-            background: #fff;
-            border: 1.5px solid #2563eb;
-            color: #2563eb;
-            border-radius: 20px;
-            padding: 8px 14px;
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            text-align: center;
-            transition: background 0.2s, color 0.2s;
-            text-decoration: none;
-            display: block;
-        }
-        .wa-call-btn:hover {
-            background: #2563eb;
-            color: #fff;
-        }
-        /* Calendar button style in widget */
-        .wa-cal-btn {
-            background: #fff;
-            border: 1.5px solid #7c3aed;
-            color: #7c3aed;
-            border-radius: 20px;
-            padding: 8px 14px;
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            text-align: center;
-            transition: background 0.2s, color 0.2s;
-            text-decoration: none;
-            display: block;
-        }
-        .wa-cal-btn:hover {
-            background: #7c3aed;
-            color: #fff;
-        }
-        #wa-toggle-btn {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: #25D366;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
+        .wa-btn.wa-q    { background: #fff; border: 1.5px solid var(--wa-green); color: var(--wa-dark); }
+        .wa-btn.wa-q:hover { background: var(--wa-green); color: #fff; }
+        .wa-btn.wa-cal  { background: #fff; border: 1.5px solid var(--violet); color: var(--violet); }
+        .wa-btn.wa-cal:hover { background: var(--violet); color: #fff; }
+        .wa-btn.wa-call { background: #fff; border: 1.5px solid var(--blue); color: var(--blue); }
+        .wa-btn.wa-call:hover { background: var(--blue); color: #fff; }
+        #wa-toggle {
+            width: 60px; height: 60px; border-radius: 50%;
+            background: var(--wa-green); display: flex; align-items: center; justify-content: center;
+            cursor: pointer; border: none;
             box-shadow: 0 4px 20px rgba(37,211,102,0.45);
             transition: transform 0.2s, background 0.2s;
-            border: none;
             position: relative;
         }
-        #wa-toggle-btn:hover {
-            background: #20ba5a;
-            transform: scale(1.08);
-        }
-        #wa-toggle-btn .wa-icon { transition: opacity 0.2s, transform 0.2s; }
+        #wa-toggle:hover { background: #20ba5a; transform: scale(1.08); }
         #wa-badge {
-            position: absolute;
-            top: -4px;
-            right: -4px;
-            width: 18px;
-            height: 18px;
-            background: #ea580c;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 10px;
-            font-weight: 700;
-            color: #fff;
-            border: 2px solid #fff;
-        }
-        #wa-close-chat {
-            background: none;
-            border: none;
-            color: rgba(255,255,255,0.8);
-            cursor: pointer;
-            font-size: 18px;
-            margin-left: auto;
-            padding: 0 0 0 8px;
-            line-height: 1;
-        }
-        #wa-close-chat:hover { color: #fff; }
-
-        /* Widget divider label */
-        .wa-section-label {
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: #aaa;
-            padding: 4px 0 2px;
+            position: absolute; top: -4px; right: -4px;
+            width: 18px; height: 18px; background: #ea580c;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 10px; font-weight: 700; color: #fff; border: 2px solid #fff;
         }
 
-        /* FAQ Accordion Styles */
-        details summary {
-            list-style: none;
+        /* Mobile improvements */
+        @media (max-width: 767px) {
+            .hero-title { font-size: 2.6rem !important; line-height: 1.1; }
+            .section-title { font-size: 2rem !important; }
+            details summary { padding: 1.25rem 1.25rem; font-size: 0.95rem; }
+            .faq-body { padding: 0 1.25rem 1.5rem; }
         }
-        details summary::-webkit-details-marker {
-            display: none;
-        }
-        details[open] summary {
-            margin-bottom: 1rem;
-        }
-        details[open] .faq-chevron {
-            transform: rotate(180deg);
-        }
+
+        /* Smooth scroll */
+        html { scroll-behavior: smooth; }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-white font-sans">
-    <!-- NAVBAR -->
-    <nav class="bg-white shadow sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <!-- Logo -->
-            <div class="flex items-center">
-                <div class="flex items-center gap-2">
-                    <span class="text-4xl font-black tracking-[-3px] text-pink-500">hey__tri</span>
-                    <span class="text-3xl font-bold text-gray-800">cleans</span>
-                </div>
-            </div>
-            <!-- Desktop & Tablet Menu -->
-            <div class="hidden md:flex gap-6 text-gray-700 font-medium items-center">
-                <a href="#services" class="hover:text-pink-600">Services</a>
-                <a href="#reviews" class="hover:text-pink-600">Reviews</a>
-                <a href="#about" class="hover:text-pink-600">About Me</a>
-                <a href="#videos" class="hover:text-pink-600">Videos</a>
-                <a href="#faq" class="hover:text-pink-600">FAQs</a>
-            </div>
-            <!-- Desktop CTAs -->
-            <div class="hidden md:flex items-center gap-3">
-                <a href="https://cal.com/hey-tricleans" target="_blank" class="nav-cta-pill cal">
-                    <i class="fas fa-calendar-check text-sm"></i>
-                    Book Online
-                </a>
-                <a href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20would%20like%20to%20book%20a%20clean%20with%20you" target="_blank" class="nav-cta-pill wa">
-                    <i class="fab fa-whatsapp text-base"></i>
-                    WhatsApp
-                </a>
-            </div>
-            <!-- Hamburger for mobile only -->
-            <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden text-3xl text-gray-700 hover:text-pink-600 transition-colors p-2">
-                <i class="fas fa-bars"></i>
-            </button>
+
+<!-- ══════════════════ NAVBAR ══════════════════ -->
+<nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="logo-mark text-4xl"><span class="l-hey">hey__tri</span><span class="l-cleans"> cleans</span></a>
+        <div class="hidden md:flex gap-6 text-gray-600 font-medium text-sm items-center">
+            <a href="#services" class="hover:text-pink-600 transition-colors">Services</a>
+            <a href="#reviews"  class="hover:text-pink-600 transition-colors">Reviews</a>
+            <a href="#about"    class="hover:text-pink-600 transition-colors">About</a>
+            <a href="#videos"   class="hover:text-pink-600 transition-colors">Videos</a>
+            <a href="#faq"      class="hover:text-pink-600 transition-colors">FAQs</a>
         </div>
-        <!-- MOBILE MENU -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-lg">
-            <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-y-2 text-lg font-medium text-gray-700">
-                <a onclick="toggleMobileMenu()" href="#services" class="hover:text-pink-600 py-4 px-2 border-b flex items-center justify-between">
-                    Services <span class="text-pink-400 text-xl">→</span>
-                </a>
-                <a onclick="toggleMobileMenu()" href="#reviews" class="hover:text-pink-600 py-4 px-2 border-b flex items-center justify-between">
-                    Reviews <span class="text-pink-400 text-xl">→</span>
-                </a>
-                <a onclick="toggleMobileMenu()" href="#about" class="hover:text-pink-600 py-4 px-2 border-b flex items-center justify-between">
-                    About Me <span class="text-pink-400 text-xl">→</span>
-                </a>
-                <a onclick="toggleMobileMenu()" href="#videos" class="hover:text-pink-600 py-4 px-2 border-b flex items-center justify-between">
-                    Videos <span class="text-pink-400 text-xl">→</span>
-                </a>
-                <a onclick="toggleMobileMenu()" href="#faq" class="hover:text-pink-600 py-4 px-2 border-b flex items-center justify-between">
-                    FAQs <span class="text-pink-400 text-xl">→</span>
-                </a>
-                <!-- Mobile CTAs -->
-                <a href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20would%20like%20to%20book%20a%20clean%20with%20you" onclick="toggleMobileMenu()" target="_blank" class="mt-2 flex items-center gap-3 py-4 px-2 border-b text-[#128C7E] font-semibold">
-                    <i class="fab fa-whatsapp text-[#25D366] text-2xl"></i>
-                    Message on WhatsApp
-                    <span class="ml-auto text-pink-400 text-xl">→</span>
-                </a>
-                <a href="tel:+447786817644" onclick="toggleMobileMenu()" class="flex items-center gap-3 py-4 px-2 border-b text-blue-600 font-semibold">
-                    <i class="fas fa-phone text-blue-500 text-xl"></i>
-                    Call +44 7786 817644
-                    <span class="ml-auto text-pink-400 text-xl">→</span>
-                </a>
-                <a href="https://cal.com/hey-tricleans" onclick="toggleMobileMenu()" target="_blank" class="flex items-center gap-3 py-4 px-2 border-b text-violet-600 font-semibold">
-                    <i class="fas fa-calendar-check text-violet-500 text-xl"></i>
-                    Book via Calendar
-                    <span class="ml-auto text-pink-400 text-xl">→</span>
-                </a>
-                <a href="mailto:heytri33@gmail.com" onclick="toggleMobileMenu()" class="flex items-center gap-3 py-4 px-2 text-pink-600 font-semibold">
-                    <i class="fas fa-envelope text-pink-500 text-xl"></i>
-                    heytri33@gmail.com
-                    <span class="ml-auto text-pink-400 text-xl">→</span>
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- HERO -->
-    <header class="hero-bg relative flex items-center min-h-[620px] md:min-h-[700px]" style="background-image: url('images/banner.jpeg');">
-        <div class="absolute inset-0 bg-black/45"></div>
-        <div class="max-w-4xl mx-auto px-6 text-center relative z-10 py-12 md:py-20 lg:py-28">
-            <h1 class="hero-title text-4xl md:text-6xl lg:text-7xl font-bold mb-6 flex items-center justify-center gap-4 text-white">
-                Hi, I'm <span class="tri-font">Tri</span> <span class="text-5xl md:text-6xl">👋</span>
-            </h1>
-            <p class="text-xl md:text-2xl lg:text-3xl mb-10 text-white max-w-2xl mx-auto">
-                Your friendly local professional cleaner.<br>
-                Spotless homes in Peckham, Dulwich &amp; Camberwell.
-            </p>
-            <!-- Hero CTAs -->
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20would%20like%20to%20book%20a%20clean%20with%20you" target="_blank" class="whatsapp-green inline-flex items-center justify-center gap-3 text-white text-xl font-semibold px-8 py-4 rounded-3xl shadow-xl hover:scale-105 transition">
-                    <i class="fab fa-whatsapp text-3xl"></i>
-                    WhatsApp Me
-                </a>
-                <a href="https://cal.com/hey-tricleans" target="_blank" class="bg-violet-600 hover:bg-violet-700 inline-flex items-center justify-center gap-3 text-white text-xl font-semibold px-8 py-4 rounded-3xl shadow-xl hover:scale-105 transition">
-                    <i class="fas fa-calendar-check text-2xl"></i>
-                    Book Online
-                </a>
-            </div>
-            <p class="mt-10 text-base text-white/90">Serving Peckham, Dulwich, Camberwell and surroundings • Residential cleaning from £20/hr</p>
-        </div>
-    </header>
-
-    <!-- ABOUT -->
-    <section id="about" class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-start">
-            <div class="md:col-span-5">
-                <div class="bg-white rounded-3xl shadow-xl p-8">
-                    <img src="images/me.jpeg" alt="Tri" class="w-full rounded-2xl shadow">
-                    <div class="mt-6 text-center">
-                        <h2 class="text-4xl font-bold text-pink-600 tri-font">Tri</h2>
-                        <p class="text-xl text-gray-600">
-                            Founder of&nbsp;<span class="inline-logo text-xl"><span class="logo-hey">hey__tri</span><span class="logo-cleans">cleans</span></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="md:col-span-7 pt-8">
-                <p class="text-lg leading-relaxed text-gray-700">Hi! I'm Tri, founder of hey__tri cleans. I'm a professional domestic cleaner in South East London. I offer reliable residential cleaning from £20 per hour across Peckham, Dulwich and Camberwell.</p>
-                <p class="mt-6 text-lg text-gray-700">No agencies, no hassle — just one trusted local person who cleans to a high standard.</p>
-                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-2xl shadow flex items-start gap-4">
-                        <div class="text-3xl">✅</div>
-                        <div>
-                            <p class="font-semibold">Identity &amp; qualifications checked</p>
-                            <p class="text-sm text-gray-600">Background checked &amp; fully insured</p>
-                        </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow flex items-start gap-4">
-                        <div class="text-3xl">✅</div>
-                        <div>
-                            <p class="font-semibold">Secure &amp; easy booking</p>
-                            <p class="text-sm text-gray-600">WhatsApp, online calendar, or call – payment after the clean</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ── 4-WAY CONTACT ROW ── -->
-                <div class="mt-10">
-                    <p class="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-4">Get in touch or book</p>
-                    <div class="grid grid-cols-2 gap-3">
-                        <a href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20would%20like%20to%20book%20a%20clean%20with%20you" target="_blank" class="cta-pill wa">
-                            <i class="fab fa-whatsapp text-lg"></i>
-                            WhatsApp
-                        </a>
-                        <a href="tel:+447786817644" class="cta-pill call">
-                            <i class="fas fa-phone text-sm"></i>
-                            Call Now
-                        </a>
-                        <a href="https://cal.com/hey-tricleans" target="_blank" class="cta-pill cal">
-                            <i class="fas fa-calendar-check text-sm"></i>
-                            Book Online
-                        </a>
-                        <a href="mailto:heytri33@gmail.com" class="cta-pill email">
-                            <i class="fas fa-envelope text-sm"></i>
-                            Email Me
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICES CAROUSEL -->
-    <section id="services" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="section-heading text-4xl font-bold text-center mb-4">My Popular Cleaning Services</h2>
-            <p class="text-center text-xl text-gray-600 mb-12">Reliable, friendly cleaning in Peckham, Dulwich &amp; Camberwell</p>
-            <div class="relative px-4 md:px-12">
-                <div id="carousel" class="carousel-container flex gap-6 md:gap-8 overflow-x-auto pb-12 snap-x snap-mandatory">
-                    <div class="service-card min-w-[280px] md:min-w-[300px] bg-white rounded-3xl shadow overflow-hidden snap-center flex flex-col">
-                        <img src="images/hover.jpeg" alt="Weekly Regular Cleaning" class="w-full h-48 md:h-64 object-cover flex-shrink-0">
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-2xl font-semibold">Weekly Regular Cleaning</h3>
-                            <p class="text-gray-600 mt-2 flex-1">Keep your home fresh and tidy every week</p>
-                            <p class="price-tag mt-4">£20/hr • 2 hrs minimum</p>
-                        </div>
-                    </div>
-                    <div class="service-card min-w-[280px] md:min-w-[300px] bg-white rounded-3xl shadow overflow-hidden snap-center flex flex-col">
-                        <img src="images/window.jpeg" alt="Fortnightly Regular Cleaning" class="w-full h-48 md:h-64 object-cover flex-shrink-0">
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-2xl font-semibold">Fortnightly Regular Cleaning</h3>
-                            <p class="text-gray-600 mt-2 flex-1">Every two weeks – great value for busy homes</p>
-                            <p class="price-tag mt-4">£21/hr • 3 hrs minimum</p>
-                        </div>
-                    </div>
-                    <div class="service-card min-w-[280px] md:min-w-[300px] bg-white rounded-3xl shadow overflow-hidden snap-center flex flex-col">
-                        <img src="images/kitchen.jpeg" alt="One-off Cleaning" class="w-full h-48 md:h-64 object-cover flex-shrink-0">
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-2xl font-semibold">One-off Cleaning</h3>
-                            <p class="text-gray-600 mt-2 flex-1">Move-in, move-out, or special occasions</p>
-                            <p class="price-tag mt-4">£25/hr • 3 hrs minimum</p>
-                        </div>
-                    </div>
-                    <div class="service-card min-w-[280px] md:min-w-[300px] bg-white rounded-3xl shadow overflow-hidden snap-center flex flex-col">
-                        <img src="images/bathroom.jpeg" alt="End of Tenancy Cleaning" class="w-full h-48 md:h-64 object-cover flex-shrink-0">
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-2xl font-semibold">End of Tenancy Cleaning</h3>
-                            <p class="text-gray-600 mt-2 flex-1">Thorough deep clean to help you get your full deposit back</p>
-                            <p class="price-tag mt-4">From £220 (typical 1–2 bed) • Quote based on property size</p>
-                        </div>
-                    </div>
-                    <div class="service-card min-w-[280px] md:min-w-[300px] bg-white rounded-3xl shadow overflow-hidden snap-center flex flex-col">
-                        <img src="images/airbnb.jpeg" alt="Airbnb Turnover Cleaning" class="w-full h-48 md:h-64 object-cover flex-shrink-0">
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-2xl font-semibold">Airbnb Turnover Cleaning</h3>
-                            <p class="text-gray-600 mt-2 flex-1">Hotel-standard turnover for short-term rentals</p>
-                            <p class="price-tag mt-4">£80–£90 flat (1–2 bed)</p>
-                        </div>
-                    </div>
-                    <div class="service-card min-w-[280px] md:min-w-[300px] bg-white rounded-3xl shadow overflow-hidden snap-center flex flex-col">
-                        <img src="images/iron.jpeg" alt="Ironing Service" class="w-full h-48 md:h-64 object-cover flex-shrink-0">
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-2xl font-semibold">Ironing Service</h3>
-                            <p class="text-gray-600 mt-2 flex-1">Freshly pressed clothes delivered with care</p>
-                            <p class="price-tag mt-4">Add-on from £15 per load</p>
-                        </div>
-                    </div>
-                    <div class="service-card min-w-[280px] md:min-w-[300px] bg-white rounded-3xl shadow overflow-hidden snap-center flex flex-col">
-                        <img src="images/mop.jpeg" alt="Same Day / Emergency Cleaning" class="w-full h-48 md:h-64 object-cover flex-shrink-0">
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-2xl font-semibold">Same Day / Emergency Cleaning</h3>
-                            <p class="text-gray-600 mt-2 flex-1">Quick response when you need it fast</p>
-                            <p class="price-tag mt-4">£28/hr (subject to availability)</p>
-                        </div>
-                    </div>
-                </div>
-                <button onclick="scrollCarousel(-320)" class="absolute left-[-25px] top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-pink-50 text-pink-600 p-4 rounded-full text-2xl z-20 hidden md:block">←</button>
-                <button onclick="scrollCarousel(320)" class="absolute right-[-25px] top-1/2 -translate-y-1/2 bg-white shadow-lg hover:bg-pink-50 text-pink-600 p-4 rounded-full text-2xl z-20 hidden md:block">→</button>
-            </div>
-            <div class="md:hidden flex justify-center mt-6 text-pink-500 font-medium items-center gap-3">
-                <span class="text-2xl">👈</span>
-                <span class="text-sm tracking-widest uppercase">SWIPE TO SEE ALL SERVICES</span>
-                <span class="text-2xl">👉</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- BENEFITS -->
-    <section class="py-20 bg-pink-50">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="section-heading text-4xl font-bold text-center mb-12">
-                You're going to love working with&nbsp;<span class="inline-logo text-4xl" style="vertical-align: baseline;"><span class="logo-hey">hey__tri</span><span class="logo-cleans">cleans</span></span>
-            </h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-3xl shadow text-center">
-                    <div class="text-5xl mb-4">⚡</div>
-                    <h3 class="text-2xl font-semibold mb-3">Efficient</h3>
-                    <p class="text-gray-600">No agencies – just reliable, high-quality cleaning done right.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl shadow text-center">
-                    <div class="text-5xl mb-4">🔄</div>
-                    <h3 class="text-2xl font-semibold mb-3">Flexible</h3>
-                    <p class="text-gray-600">Change, cancel or reschedule easily to fit your schedule.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl shadow text-center">
-                    <div class="text-5xl mb-4">💰</div>
-                    <h3 class="text-2xl font-semibold mb-3">Accessible</h3>
-                    <p class="text-gray-600">Fair pricing and easy booking – WhatsApp, call or online calendar.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- GOOGLE REVIEWS -->
-    <section id="reviews" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="section-heading text-4xl font-bold mb-3">What my clients say</h2>
-                <p class="text-xl text-gray-600">Real Google reviews from homeowners in the area</p>
-                <div class="flex justify-center items-center gap-2 mt-4 text-3xl review-stars">★★★★★ <span class="text-gray-600 text-lg ml-3">(4.9 average rating)</span></div>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="review-card bg-white border border-gray-100 p-8 rounded-3xl shadow">
-                    <div class="review-stars text-2xl mb-4">★★★★★</div>
-                    <p class="text-gray-700 italic">"Tri cleaned my Peckham flat to perfection. Spotless every time and so reliable. My home has never looked better!"</p>
-                    <div class="mt-6 flex items-center gap-3">
-                        <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 font-semibold">N</div>
-                        <div>
-                            <p class="font-semibold">Nick</p>
-                            <p class="text-sm text-gray-500">Peckham • March 2026</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="review-card bg-white border border-gray-100 p-8 rounded-3xl shadow">
-                    <div class="review-stars text-2xl mb-4">★★★★★</div>
-                    <p class="text-gray-700 italic">"Regular weekly clean plus occasional deep cleans. Tri is always on time, thorough and friendly. My home stays spotless week after week — highly recommend!"</p>
-                    <div class="mt-6 flex items-center gap-3">
-                        <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 font-semibold">L</div>
-                        <div>
-                            <p class="font-semibold">Len</p>
-                            <p class="text-sm text-gray-500">Dulwich • February 2026</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="review-card bg-white border border-gray-100 p-8 rounded-3xl shadow">
-                    <div class="review-stars text-2xl mb-4">★★★★★</div>
-                    <p class="text-gray-700 italic">"Moved into a messy rental and Tri did an amazing one-off deep clean. She's now my go-to cleaner. Professional, kind and does what she says every time."</p>
-                    <div class="mt-6 flex items-center gap-3">
-                        <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 font-semibold">A</div>
-                        <div>
-                            <p class="font-semibold">Indi</p>
-                            <p class="text-sm text-gray-500">Camberwell • 1 week ago</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PAYMENT METHODS -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="section-heading text-4xl font-bold text-center mb-4">Payment Methods</h2>
-            <p class="text-center text-xl text-gray-600 mb-12">Flexible options – payment taken after the clean</p>
-            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                <div class="payment-card bg-white p-8 rounded-3xl shadow text-center">
-                    <i class="fas fa-money-bill-wave text-6xl text-emerald-600 mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-2">Cash</h3>
-                    <p class="text-gray-600">Pay in cash on the day</p>
-                </div>
-                <div class="payment-card bg-white p-8 rounded-3xl shadow text-center">
-                    <i class="fas fa-money-bill-transfer text-6xl text-blue-600 mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-2">Bank Transfer</h3>
-                    <p class="text-gray-600">Quick BACS or instant transfer</p>
-                </div>
-                <div class="payment-card bg-white p-8 rounded-3xl shadow text-center">
-                    <i class="fab fa-bitcoin text-6xl mb-6" style="color: #F7931A;"></i>
-                    <h3 class="text-2xl font-semibold mb-2">Bitcoin</h3>
-                    <p class="text-gray-600">Pay with BTC – modern &amp; secure</p>
-                </div>
-            </div>
-            <p class="text-center text-sm text-gray-500 mt-10">Choose whichever method works best for you</p>
-        </div>
-    </section>
-
-    <!-- VIDEOS -->
-    <section id="videos" class="py-20 bg-white">
-        <div class="max-w-xs mx-auto px-4">
-            <h2 class="section-heading text-3xl font-bold text-center mb-8">See me in action</h2>
-            <div class="bg-white rounded-3xl overflow-hidden shadow">
-                <div class="relative pb-[177.78%] max-h-[500px]">
-                    <iframe class="absolute top-0 left-0 w-full h-full rounded-t-3xl" src="https://www.tiktok.com/embed/7629418392151264534" frameborder="0" allowfullscreen scrolling="no"></iframe>
-                </div>
-                <div class="p-3">
-                    <p class="font-medium text-xs text-center">Watch hey__tri cleans in action</p>
-                </div>
-            </div>
-            <!-- SOCIAL LINKS -->
-            <div class="flex justify-center gap-10 mt-12 text-2xl text-gray-700">
-                <a href="https://www.tiktok.com/@hey__tri" target="_blank" class="hover:text-pink-600">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-                <a href="https://www.youtube.com/@hey__tri" target="_blank" class="hover:text-pink-600">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="YOUR-INSTAGRAM-LINK" target="_blank" class="hover:text-pink-600">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://x.com/hey__tri" target="_blank" class="hover:text-pink-600">
-                    <i class="fab fa-x-twitter"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQS -->
-    <section id="faq" class="py-20 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="section-heading text-4xl font-bold text-center mb-4">Frequently Asked Questions</h2>
-            <p class="text-center text-xl text-gray-600 mb-12">Got questions? Here are the answers to the most common ones</p>
-            
-            <div class="space-y-6">
-                <!-- FAQ 1 -->
-                <details class="border border-gray-200 rounded-3xl overflow-hidden bg-white">
-                    <summary class="flex justify-between items-center px-8 py-6 text-xl font-semibold cursor-pointer hover:bg-pink-50">
-                        <span>Do you bring your own cleaning equipment?</span>
-                        <i class="fas fa-chevron-down text-pink-500 faq-chevron transition-transform duration-300 flex-shrink-0 ml-4"></i>
-                    </summary>
-                    <div class="px-8 pb-8 text-gray-700 leading-relaxed">
-                        No hoover, but yes – I bring my own basic sprays, cloths and supplies. I'm also very happy to use any cleaning products or equipment that you already have at home if you prefer. Just let me know!
-                    </div>
-                </details>
-
-                <!-- FAQ 2 – updated -->
-                <details class="border border-gray-200 rounded-3xl overflow-hidden bg-white">
-                    <summary class="flex justify-between items-center px-8 py-6 text-xl font-semibold cursor-pointer hover:bg-pink-50">
-                        <span>How do I book?</span>
-                        <i class="fas fa-chevron-down text-pink-500 faq-chevron transition-transform duration-300 flex-shrink-0 ml-4"></i>
-                    </summary>
-                    <div class="px-8 pb-8 text-gray-700 leading-relaxed">
-                        <p class="mb-4">There are three easy ways to book:</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3">
-                                <span class="text-[#25D366] text-xl mt-0.5"><i class="fab fa-whatsapp"></i></span>
-                                <span><strong>WhatsApp</strong> – message me with your preferred date and time and I'll reply quickly to confirm availability and get you booked in.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-violet-600 text-xl mt-0.5"><i class="fas fa-calendar-check"></i></span>
-                                <span><strong>Online calendar</strong> – pick a slot that suits you directly at <a href="https://cal.com/hey-tricleans" target="_blank" class="text-violet-600 font-semibold underline hover:text-violet-800">cal.com/hey-tricleans</a>.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-blue-600 text-xl mt-0.5"><i class="fas fa-phone"></i></span>
-                                <span><strong>Call me</strong> – prefer to chat first? Give me a ring on <a href="tel:+447786817644" class="text-blue-600 font-semibold underline hover:text-blue-800">+44 7786 817644</a>.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </details>
-
-                <!-- FAQ 3 – availability -->
-                <details class="border border-gray-200 rounded-3xl overflow-hidden bg-white">
-                    <summary class="flex justify-between items-center px-8 py-6 text-xl font-semibold cursor-pointer hover:bg-pink-50">
-                        <span>How do I check your availability?</span>
-                        <i class="fas fa-chevron-down text-pink-500 faq-chevron transition-transform duration-300 flex-shrink-0 ml-4"></i>
-                    </summary>
-                    <div class="px-8 pb-8 text-gray-700 leading-relaxed">
-                        <p class="mb-4">The quickest way is to check the calendar directly at <a href="https://cal.com/hey-tricleans" target="_blank" class="text-violet-600 font-semibold underline hover:text-violet-800">cal.com/hey-tricleans</a> — you'll be able to see open slots in real time.</p>
-                        <p>If you have any questions about availability or need a slot that isn't showing, just <a href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20have%20a%20question%20about%20your%20availability" target="_blank" class="text-[#128C7E] font-semibold underline">WhatsApp me</a> and I'll do my best to help you get booked in.</p>
-                    </div>
-                </details>
-
-                <!-- FAQ 4 -->
-                <details class="border border-gray-200 rounded-3xl overflow-hidden bg-white">
-                    <summary class="flex justify-between items-center px-8 py-6 text-xl font-semibold cursor-pointer hover:bg-pink-50">
-                        <span>What areas do you cover?</span>
-                        <i class="fas fa-chevron-down text-pink-500 faq-chevron transition-transform duration-300 flex-shrink-0 ml-4"></i>
-                    </summary>
-                    <div class="px-8 pb-8 text-gray-700 leading-relaxed">
-                        I serve Peckham, Dulwich, Camberwell and all surrounding postcodes in South East London (SE15, SE21, SE5 and nearby areas).
-                    </div>
-                </details>
-
-                <!-- FAQ 5 -->
-                <details class="border border-gray-200 rounded-3xl overflow-hidden bg-white">
-                    <summary class="flex justify-between items-center px-8 py-6 text-xl font-semibold cursor-pointer hover:bg-pink-50">
-                        <span>What's your cancellation policy?</span>
-                        <i class="fas fa-chevron-down text-pink-500 faq-chevron transition-transform duration-300 flex-shrink-0 ml-4"></i>
-                    </summary>
-                    <div class="px-8 pb-8 text-gray-700 leading-relaxed">
-                        You can cancel or reschedule for free up to 24 hours before your clean. For shorter notice, just message me and I'll do my best to help.
-                    </div>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <div class="bg-pink-600 text-white py-16 md:py-20 text-center">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Ready for a sparkling home?</h2>
-        <p class="text-pink-100 text-lg mb-10">Choose however you'd like to get in touch</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center px-6">
-            <a href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20would%20like%20to%20book%20a%20clean%20with%20you" target="_blank" class="whatsapp-green hover:bg-[#20ba5a] inline-flex items-center gap-3 text-white text-xl px-8 py-5 rounded-3xl font-bold hover:scale-105 transition shadow-lg">
-                <i class="fab fa-whatsapp text-3xl"></i>
-                WhatsApp Me
+        <div class="hidden md:flex items-center gap-3">
+            <a href="https://cal.com/hey-tricleans" target="_blank" class="nav-pill cal">
+                <i class="fas fa-calendar-check" style="font-size:13px;"></i> Book Online
             </a>
-            <a href="https://cal.com/hey-tricleans" target="_blank" class="bg-violet-500 hover:bg-violet-400 inline-flex items-center gap-3 text-white text-xl px-8 py-5 rounded-3xl font-bold hover:scale-105 transition shadow-lg">
-                <i class="fas fa-calendar-check text-2xl"></i>
-                Book Online
-            </a>
-            <a href="tel:+447786817644" class="bg-white/20 hover:bg-white/30 border-2 border-white/60 inline-flex items-center gap-3 text-white text-xl px-8 py-5 rounded-3xl font-bold hover:scale-105 transition shadow-lg">
-                <i class="fas fa-phone text-xl"></i>
-                Call Me
+            <a href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20would%20like%20to%20book%20a%20clean%20with%20you" target="_blank" class="nav-pill wa">
+                <i class="fab fa-whatsapp" style="font-size:15px;"></i> WhatsApp
             </a>
         </div>
-        <p class="mt-8 text-pink-200 text-sm">Or email: <a href="mailto:heytri33@gmail.com" class="underline text-white hover:text-pink-100">heytri33@gmail.com</a></p>
-    </div>
-
-    <!-- FOOTER -->
-    <footer class="bg-gray-900 text-white py-12 text-center">
-        <div class="flex items-center justify-center gap-2 mb-4">
-            <span class="text-4xl font-black tracking-[-3px] text-pink-400">hey__tri</span>
-            <span class="text-3xl font-bold text-white">cleans</span>
-        </div>
-        <p class="mt-2">Professional • Friendly • Local to Peckham, Dulwich &amp; Camberwell</p>
-        <div class="mt-5 flex flex-wrap justify-center gap-4 text-sm">
-            <a href="mailto:heytri33@gmail.com" class="inline-flex items-center gap-2 text-pink-400 hover:text-pink-300 transition-colors font-medium">
-                <i class="fas fa-envelope"></i> heytri33@gmail.com
-            </a>
-            <span class="text-gray-600 hidden sm:inline">•</span>
-            <a href="tel:+447786817644" class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors font-medium">
-                <i class="fas fa-phone"></i> +44 7786 817644
-            </a>
-            <span class="text-gray-600 hidden sm:inline">•</span>
-            <a href="https://cal.com/hey-tricleans" target="_blank" class="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 transition-colors font-medium">
-                <i class="fas fa-calendar-check"></i> Book Online
-            </a>
-        </div>
-        <div class="flex justify-center gap-8 mt-8 text-3xl">
-            <a href="https://www.tiktok.com/@hey__tri" target="_blank" class="hover:text-pink-400"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.youtube.com/@hey__tri" target="_blank" class="hover:text-pink-400"><i class="fab fa-youtube"></i></a>
-            <a href="YOUR-INSTAGRAM-LINK" target="_blank" class="hover:text-pink-400"><i class="fab fa-instagram"></i></a>
-            <a href="https://x.com/hey__tri" target="_blank" class="hover:text-pink-400"><i class="fab fa-x-twitter"></i></a>
-        </div>
-        <p class="text-sm mt-10 opacity-60">© 2026 hey__tri cleans</p>
-    </footer>
-
-    <!-- ===== WHATSAPP CHAT WIDGET ===== -->
-    <div id="wa-widget">
-        <div id="wa-chat-box">
-            <div id="wa-chat-header">
-                <div class="avatar">T</div>
-                <div class="info">
-                    <p class="name">hey__tri cleans</p>
-                    <p class="status">💬 Typically replies in minutes</p>
-                </div>
-                <button id="wa-close-chat" onclick="toggleWaChat()" aria-label="Close chat">✕</button>
-            </div>
-            <div id="wa-chat-body">
-                <div class="wa-bubble">
-                    Hi there! 👋 I'm Tri, your local cleaner in Peckham, Dulwich &amp; Camberwell.<br><br>
-                    How would you like to get in touch?
-                    <div class="time">Just now</div>
-                </div>
-            </div>
-            <div class="wa-quick-btns">
-                <!-- WhatsApp quick actions -->
-                <p class="wa-section-label">Message me</p>
-                <a class="wa-quick-btn" href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I'd%20like%20to%20book%20a%20clean%20%F0%9F%A7%B9" target="_blank">
-                    🧹 Book a clean
-                </a>
-                <a class="wa-quick-btn" href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20need%20an%20Airbnb%20turnover%20clean%20%F0%9F%A0%8F" target="_blank">
-                    🏠 Airbnb turnover
-                </a>
-                <a class="wa-quick-btn" href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20have%20a%20question%20about%20your%20services" target="_blank">
-                    ❓ Ask a question
-                </a>
-                <!-- Other contact options -->
-                <p class="wa-section-label" style="margin-top:4px;">Other ways to reach me</p>
-                <a class="wa-cal-btn" href="https://cal.com/hey-tricleans" target="_blank">
-                    📅 Book via calendar
-                </a>
-                <a class="wa-call-btn" href="tel:+447786817644">
-                    📞 Call +44 7786 817644
-                </a>
-            </div>
-        </div>
-
-        <!-- Toggle button -->
-        <button id="wa-toggle-btn" onclick="toggleWaChat()" aria-label="Open contact options">
-            <span id="wa-badge">1</span>
-            <i class="fab fa-whatsapp text-white" style="font-size:30px;" id="wa-icon-open"></i>
-            <i class="fas fa-xmark text-white" style="font-size:24px; display:none;" id="wa-icon-close"></i>
+        <button id="mob-btn" onclick="toggleMobileMenu()" class="md:hidden text-2xl text-gray-700 hover:text-pink-600 p-2 transition-colors">
+            <i class="fas fa-bars"></i>
         </button>
     </div>
-    <!-- ===== END WHATSAPP WIDGET ===== -->
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-1 text-base font-medium text-gray-700">
+            <a onclick="toggleMobileMenu()" href="#services" class="hover:text-pink-600 py-3 px-2 border-b border-gray-50 flex items-center justify-between">Services <span class="text-pink-400">›</span></a>
+            <a onclick="toggleMobileMenu()" href="#reviews"  class="hover:text-pink-600 py-3 px-2 border-b border-gray-50 flex items-center justify-between">Reviews <span class="text-pink-400">›</span></a>
+            <a onclick="toggleMobileMenu()" href="#about"    class="hover:text-pink-600 py-3 px-2 border-b border-gray-50 flex items-center justify-between">About Me <span class="text-pink-400">›</span></a>
+            <a onclick="toggleMobileMenu()" href="#videos"   class="hover:text-pink-600 py-3 px-2 border-b border-gray-50 flex items-center justify-between">Videos <span class="text-pink-400">›</span></a>
+            <a onclick="toggleMobileMenu()" href="#faq"      class="hover:text-pink-600 py-3 px-2 border-b border-gray-50 flex items-center justify-between">FAQs <span class="text-pink-400">›</span></a>
+            <a href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20would%20like%20to%20book%20a%20clean%20with%20you" onclick="toggleMobileMenu()" target="_blank" class="py-3 px-2 border-b border-gray-50 flex items-center gap-3 text-[#128C7E] font-semibold">
+                <i class="fab fa-whatsapp text-[#25D366] text-xl"></i> Message on WhatsApp <span class="ml-auto text-pink-400">›</span>
+            </a>
+            <a href="tel:+447786817644" onclick="toggleMobileMenu()" class="py-3 px-2 border-b border-gray-50 flex items-center gap-3 text-blue-600 font-semibold">
+                <i class="fas fa-phone text-blue-500 text-lg"></i> Call +44 7786 817644 <span class="ml-auto text-pink-400">›</span>
+            </a>
+            <a href="https://cal.com/hey-tricleans" onclick="toggleMobileMenu()" target="_blank" class="py-3 px-2 border-b border-gray-50 flex items-center gap-3 text-violet-600 font-semibold">
+                <i class="fas fa-calendar-check text-violet-500 text-lg"></i> Book via Calendar <span class="ml-auto text-pink-400">›</span>
+            </a>
+            <a href="mailto:heytri33@gmail.com" onclick="toggleMobileMenu()" class="py-3 px-2 flex items-center gap-3 text-pink-600 font-semibold">
+                <i class="fas fa-envelope text-pink-500 text-lg"></i> heytri33@gmail.com <span class="ml-auto text-pink-400">›</span>
+            </a>
+        </div>
+    </div>
+</nav>
 
-    <script>
-        function scrollCarousel(offset) {
-            const carousel = document.getElementById('carousel');
-            carousel.scrollBy({ left: offset, behavior: 'smooth' });
+<!-- ══════════════════ HERO ══════════════════ -->
+<header class="hero-bg relative flex items-center min-h-[620px] md:min-h-[700px]" style="background-image: url('images/banner.jpeg');">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/55"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10 py-16 md:py-24">
+        <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 rounded-full px-4 py-1.5 mb-6 text-white text-sm font-medium">
+            <span class="w-2 h-2 bg-[#25D366] rounded-full"></span>
+            Available now in Peckham, Dulwich &amp; Camberwell
+        </div>
+        <h1 class="hero-title text-5xl md:text-7xl font-bold mb-5 text-white leading-tight">
+            Hi, I'm <span class="tri-font text-pink-400">Tri</span> 👋
+        </h1>
+        <p class="text-xl md:text-2xl mb-10 text-white/90 max-w-xl mx-auto leading-relaxed">
+            Your friendly local professional cleaner.<br>Spotless homes from&nbsp;<strong>£20/hr</strong>.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+            <a href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20would%20like%20to%20book%20a%20clean%20with%20you" target="_blank" class="btn wa text-base px-7 py-4">
+                <i class="fab fa-whatsapp text-xl"></i> WhatsApp Me
+            </a>
+            <a href="https://cal.com/hey-tricleans" target="_blank" class="btn cal text-base px-7 py-4">
+                <i class="fas fa-calendar-check text-lg"></i> Book Online
+            </a>
+            <a href="tel:+447786817644" class="btn ghost text-base px-7 py-4">
+                <i class="fas fa-phone text-base"></i> Call Now
+            </a>
+        </div>
+        <!-- Trust chips -->
+        <div class="flex flex-wrap gap-3 justify-center mt-10">
+            <span class="trust-chip"><i class="fas fa-shield-halved text-pink-500" style="font-size:13px;"></i> Fully insured</span>
+            <span class="trust-chip"><i class="fas fa-id-card text-pink-500" style="font-size:13px;"></i> ID &amp; background checked</span>
+            <span class="trust-chip"><i class="fas fa-star text-yellow-400" style="font-size:13px;"></i> 4.9 on Google</span>
+        </div>
+    </div>
+</header>
+
+<!-- ══════════════════ ABOUT ══════════════════ -->
+<section id="about" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-start">
+        <div class="md:col-span-5">
+            <div class="bg-white rounded-2xl shadow-md p-7">
+                <img src="images/me.jpeg" alt="Tri" class="w-full rounded-xl">
+                <div class="mt-5 text-center">
+                    <h2 class="text-4xl font-bold text-pink-600 tri-font">Tri</h2>
+                    <p class="text-gray-500 mt-0.5">Founder of&nbsp;<span class="logo-mark text-base"><span class="l-hey">hey__tri</span><span class="l-cleans" style="color:#1f2937;"> cleans</span></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="md:col-span-7 pt-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">No agencies. Just one<br>trusted person who cares.</h2>
+            <p class="text-gray-600 leading-relaxed">Hi! I'm Tri, a professional domestic cleaner serving South East London. I offer reliable residential cleaning from £20/hr across Peckham, Dulwich and Camberwell — and I clean to a consistently high standard, every single visit.</p>
+            <p class="mt-4 text-gray-600 leading-relaxed">When you book with me, you're dealing directly with me — not a faceless agency. I remember your home, your preferences, and I show up when I say I will.</p>
+
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-check text-green-600" style="font-size:13px;"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-900 text-sm">Identity &amp; qualifications checked</p>
+                        <p class="text-gray-500 text-xs mt-0.5">Background checked &amp; fully insured</p>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-full bg-violet-100 flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-lock text-violet-600" style="font-size:13px;"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-900 text-sm">Easy, secure booking</p>
+                        <p class="text-gray-500 text-xs mt-0.5">WhatsApp, calendar, or call — pay after the clean</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-9">
+                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Get in touch or book</p>
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20would%20like%20to%20book%20a%20clean%20with%20you" target="_blank" class="cta-pill wa">
+                        <i class="fab fa-whatsapp text-base"></i> WhatsApp
+                    </a>
+                    <a href="tel:+447786817644" class="cta-pill call">
+                        <i class="fas fa-phone" style="font-size:12px;"></i> Call Now
+                    </a>
+                    <a href="https://cal.com/hey-tricleans" target="_blank" class="cta-pill cal">
+                        <i class="fas fa-calendar-check" style="font-size:12px;"></i> Book Online
+                    </a>
+                    <a href="mailto:heytri33@gmail.com" class="cta-pill email">
+                        <i class="fas fa-envelope" style="font-size:12px;"></i> Email Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════ SERVICES ══════════════════ -->
+<section id="services" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="section-title text-4xl font-bold text-center mb-2">My Cleaning Services</h2>
+        <p class="text-center text-gray-500 mb-12">Reliable, friendly cleaning in Peckham, Dulwich &amp; Camberwell</p>
+        <div class="relative px-4 md:px-12">
+            <div id="carousel" class="carousel-wrap">
+                <!-- Card 1 -->
+                <div class="service-card">
+                    <img src="images/hover.jpeg" alt="Weekly Regular Cleaning">
+                    <div class="card-body">
+                        <h3>Weekly Regular Cleaning</h3>
+                        <p>Keep your home fresh and tidy every week without lifting a finger.</p>
+                        <span class="price-badge">£20/hr · 2 hr min</span>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="service-card">
+                    <img src="images/window.jpeg" alt="Fortnightly Regular Cleaning">
+                    <div class="card-body">
+                        <h3>Fortnightly Regular Cleaning</h3>
+                        <p>Every two weeks — great value for busy households.</p>
+                        <span class="price-badge">£21/hr · 3 hr min</span>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="service-card">
+                    <img src="images/kitchen.jpeg" alt="One-off Cleaning">
+                    <div class="card-body">
+                        <h3>One-off Cleaning</h3>
+                        <p>Move-in, move-out, special occasions or just a reset.</p>
+                        <span class="price-badge">£25/hr · 3 hr min</span>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="service-card">
+                    <img src="images/bathroom.jpeg" alt="End of Tenancy Cleaning">
+                    <div class="card-body">
+                        <h3>End of Tenancy Cleaning</h3>
+                        <p>Thorough deep clean to help you get your full deposit back.</p>
+                        <span class="price-badge">From £220 · quote by size</span>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="service-card">
+                    <img src="images/airbnb.jpeg" alt="Airbnb Turnover Cleaning">
+                    <div class="card-body">
+                        <h3>Airbnb Turnover Cleaning</h3>
+                        <p>Hotel-standard turnovers for short-term rentals — guests will notice.</p>
+                        <span class="price-badge">£80–£90 flat (1–2 bed)</span>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="service-card">
+                    <img src="images/iron.jpeg" alt="Ironing Service">
+                    <div class="card-body">
+                        <h3>Ironing Service</h3>
+                        <p>Freshly pressed clothes delivered with care as an add-on.</p>
+                        <span class="price-badge">From £15 per load</span>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="service-card">
+                    <img src="images/mop.jpeg" alt="Same Day / Emergency Cleaning">
+                    <div class="card-body">
+                        <h3>Same Day / Emergency</h3>
+                        <p>Quick response when you need it fast — subject to availability.</p>
+                        <span class="price-badge">£28/hr</span>
+                    </div>
+                </div>
+            </div>
+            <button onclick="scrollCarousel(-320)" class="carousel-arrow left hidden md:flex">
+                <i class="fas fa-chevron-left" style="font-size:14px;"></i>
+            </button>
+            <button onclick="scrollCarousel(320)"  class="carousel-arrow right hidden md:flex">
+                <i class="fas fa-chevron-right" style="font-size:14px;"></i>
+            </button>
+        </div>
+        <p class="md:hidden flex justify-center mt-4 text-gray-400 text-xs font-semibold uppercase tracking-widest items-center gap-2">
+            <i class="fas fa-hand-point-left text-pink-400"></i> Swipe to see all services <i class="fas fa-hand-point-right text-pink-400"></i>
+        </p>
+    </div>
+</section>
+
+<!-- ══════════════════ BENEFITS ══════════════════ -->
+<section class="py-20 bg-pink-50">
+    <div class="max-w-6xl mx-auto px-6">
+        <h2 class="section-title text-3xl md:text-4xl font-bold text-center mb-12">
+            You're going to love working with&nbsp;<span class="logo-mark text-3xl md:text-4xl"><span class="l-hey">hey__tri</span><span class="l-cleans" style="color:#1f2937;"> cleans</span></span>
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="benefit-card">
+                <div class="benefit-icon bg-pink-100"><i class="fas fa-bolt text-pink-600"></i></div>
+                <h3 class="text-xl font-bold mb-2">Efficient</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">No agencies — just reliable, high-quality cleaning done right, every time.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon bg-violet-100"><i class="fas fa-arrows-rotate text-violet-600"></i></div>
+                <h3 class="text-xl font-bold mb-2">Flexible</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Change, cancel or reschedule easily. Life happens — I get it.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon bg-emerald-100"><i class="fas fa-coins text-emerald-600"></i></div>
+                <h3 class="text-xl font-bold mb-2">Accessible</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Fair pricing and easy booking — WhatsApp, call or online calendar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════ REVIEWS ══════════════════ -->
+<section id="reviews" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="section-title text-3xl md:text-4xl font-bold mb-2">What my clients say</h2>
+            <p class="text-gray-500 mb-4">Real Google reviews from homeowners in the area</p>
+            <div class="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-200 rounded-full px-5 py-2">
+                <span class="stars text-yellow-400 text-lg">★★★★★</span>
+                <span class="text-gray-700 font-semibold text-sm">4.9 average on Google</span>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="review-card">
+                <div class="stars text-xl mb-3">★★★★★</div>
+                <p class="text-gray-700 italic text-sm leading-relaxed">"Tri cleaned my Peckham flat to perfection. Spotless every time and so reliable. My home has never looked better!"</p>
+                <div class="mt-5 flex items-center gap-3">
+                    <div class="w-9 h-9 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 font-bold text-sm flex-shrink-0">N</div>
+                    <div>
+                        <p class="font-semibold text-sm text-gray-900">Nick</p>
+                        <p class="text-xs text-gray-400">Peckham · March 2026</p>
+                    </div>
+                    <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="Google" class="ml-auto h-4 opacity-60">
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars text-xl mb-3">★★★★★</div>
+                <p class="text-gray-700 italic text-sm leading-relaxed">"Regular weekly clean plus occasional deep cleans. Tri is always on time, thorough and friendly. My home stays spotless week after week — highly recommend!"</p>
+                <div class="mt-5 flex items-center gap-3">
+                    <div class="w-9 h-9 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 font-bold text-sm flex-shrink-0">L</div>
+                    <div>
+                        <p class="font-semibold text-sm text-gray-900">Len</p>
+                        <p class="text-xs text-gray-400">Dulwich · February 2026</p>
+                    </div>
+                    <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="Google" class="ml-auto h-4 opacity-60">
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars text-xl mb-3">★★★★★</div>
+                <p class="text-gray-700 italic text-sm leading-relaxed">"Moved into a messy rental and Tri did an amazing one-off deep clean. She's now my go-to cleaner. Professional, kind and does what she says every time."</p>
+                <div class="mt-5 flex items-center gap-3">
+                    <div class="w-9 h-9 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 font-bold text-sm flex-shrink-0">A</div>
+                    <div>
+                        <p class="font-semibold text-sm text-gray-900">Indi</p>
+                        <p class="text-xs text-gray-400">Camberwell · 1 week ago</p>
+                    </div>
+                    <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="Google" class="ml-auto h-4 opacity-60">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════ PAYMENT ══════════════════ -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-6">
+        <h2 class="section-title text-3xl md:text-4xl font-bold text-center mb-2">Payment Methods</h2>
+        <p class="text-center text-gray-500 mb-12">Flexible options — payment taken after the clean</p>
+        <div class="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+
+            <!-- Cash -->
+            <div class="payment-card">
+                <div class="payment-icon-wrap bg-emerald-50">
+                    <!-- Banknote SVG -->
+                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="9" width="32" height="20" rx="4" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+                        <circle cx="19" cy="19" r="5" fill="#059669" opacity="0.2"/>
+                        <circle cx="19" cy="19" r="3" fill="#059669"/>
+                        <circle cx="7" cy="19" r="2.5" fill="#a7f3d0"/>
+                        <circle cx="31" cy="19" r="2.5" fill="#a7f3d0"/>
+                        <line x1="19" y1="15.5" x2="19" y2="22.5" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/>
+                        <line x1="16.5" y1="19" x2="21.5" y2="19" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold mb-1">Cash</h3>
+                <p class="text-gray-400 text-sm">Pay in cash on the day</p>
+            </div>
+
+            <!-- Bank Transfer -->
+            <div class="payment-card">
+                <div class="payment-icon-wrap bg-blue-50">
+                    <!-- Bank SVG -->
+                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="29" width="30" height="3.5" rx="1.5" fill="#bfdbfe"/>
+                        <rect x="4" y="15" width="30" height="3" rx="1" fill="#93c5fd"/>
+                        <polygon points="19,5 34,15 4,15" fill="#2563eb" opacity="0.85"/>
+                        <rect x="7"  y="18" width="4" height="11" rx="1" fill="#3b82f6"/>
+                        <rect x="17" y="18" width="4" height="11" rx="1" fill="#3b82f6"/>
+                        <rect x="27" y="18" width="4" height="11" rx="1" fill="#3b82f6"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold mb-1">Bank Transfer</h3>
+                <p class="text-gray-400 text-sm">Quick BACS or instant transfer</p>
+            </div>
+
+            <!-- Bitcoin -->
+            <div class="payment-card">
+                <div class="payment-icon-wrap" style="background:#fff7ed;">
+                    <!-- Bitcoin logo SVG (stylised B) -->
+                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="19" cy="19" r="15" fill="#F7931A" opacity="0.15"/>
+                        <circle cx="19" cy="19" r="13" fill="#F7931A" opacity="0.1"/>
+                        <text x="19" y="25" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="18" font-weight="900" fill="#F7931A">₿</text>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold mb-1">Bitcoin</h3>
+                <p class="text-gray-400 text-sm">Pay with BTC — modern &amp; secure</p>
+            </div>
+
+        </div>
+        <p class="text-center text-xs text-gray-400 mt-8">Choose whichever method works best for you</p>
+    </div>
+</section>
+
+<!-- ══════════════════ VIDEOS ══════════════════ -->
+<section id="videos" class="py-20 bg-white">
+    <div class="max-w-xs mx-auto px-4">
+        <h2 class="section-title text-3xl font-bold text-center mb-8">See me in action</h2>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
+            <div class="relative pb-[177.78%] max-h-[500px]">
+                <iframe class="absolute top-0 left-0 w-full h-full rounded-t-2xl" src="https://www.tiktok.com/embed/7629418392151264534" frameborder="0" allowfullscreen scrolling="no"></iframe>
+            </div>
+            <div class="p-3 text-center">
+                <p class="text-xs text-gray-400 font-medium">Watch hey__tri cleans in action</p>
+            </div>
+        </div>
+        <div class="flex justify-center gap-8 mt-10 text-2xl text-gray-400">
+            <a href="https://www.tiktok.com/@hey__tri" target="_blank" class="hover:text-pink-500 transition-colors"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@hey__tri" target="_blank" class="hover:text-pink-500 transition-colors"><i class="fab fa-youtube"></i></a>
+            <a href="#" target="_blank" class="hover:text-pink-500 transition-colors"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/hey__tri" target="_blank" class="hover:text-pink-500 transition-colors"><i class="fab fa-x-twitter"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════ FAQs ══════════════════ -->
+<section id="faq" class="py-20 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-6">
+        <h2 class="section-title text-3xl md:text-4xl font-bold text-center mb-2">Frequently Asked Questions</h2>
+        <p class="text-center text-gray-500 mb-12">Got questions? I've got answers.</p>
+        <div class="space-y-4">
+
+            <details>
+                <summary>
+                    Do you bring your own cleaning equipment?
+                    <i class="fas fa-chevron-down faq-chevron"></i>
+                </summary>
+                <div class="faq-body">
+                    No hoover, but yes — I bring my own basic sprays, cloths and supplies. I'm also very happy to use any products or equipment you already have at home if you prefer. Just let me know!
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    How do I book?
+                    <i class="fas fa-chevron-down faq-chevron"></i>
+                </summary>
+                <div class="faq-body">
+                    <p class="mb-4">Three easy ways:</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fab fa-whatsapp text-[#25D366] text-lg mt-0.5"></i>
+                            <span><strong>WhatsApp</strong> — message me with your preferred date and time and I'll reply quickly to confirm availability.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-calendar-check text-violet-600 text-base mt-0.5"></i>
+                            <span><strong>Online calendar</strong> — pick a slot directly at <a href="https://cal.com/hey-tricleans" target="_blank" class="text-violet-600 font-semibold underline">cal.com/hey-tricleans</a>.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-phone text-blue-600 text-base mt-0.5"></i>
+                            <span><strong>Call me</strong> — prefer to chat first? Ring me on <a href="tel:+447786817644" class="text-blue-600 font-semibold underline">+44 7786 817644</a>.</span>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    How do I check your availability?
+                    <i class="fas fa-chevron-down faq-chevron"></i>
+                </summary>
+                <div class="faq-body">
+                    The quickest way is the calendar at <a href="https://cal.com/hey-tricleans" target="_blank" class="text-violet-600 font-semibold underline">cal.com/hey-tricleans</a> — you'll see open slots in real time. If you need a slot that isn't showing, just <a href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20have%20a%20question%20about%20your%20availability" target="_blank" class="text-[#128C7E] font-semibold underline">WhatsApp me</a> and I'll do my best.
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    What areas do you cover?
+                    <i class="fas fa-chevron-down faq-chevron"></i>
+                </summary>
+                <div class="faq-body">
+                    I cover Peckham, Dulwich, Camberwell and all surrounding postcodes in South East London — SE15, SE21, SE5 and nearby areas.
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    What's your cancellation policy?
+                    <i class="fas fa-chevron-down faq-chevron"></i>
+                </summary>
+                <div class="faq-body">
+                    Free cancellation or rescheduling up to 24 hours before your clean. For shorter notice, just message me — I'll always try to help.
+                </div>
+            </details>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════ FINAL CTA ══════════════════ -->
+<section class="bg-pink-600 py-20 text-center text-white">
+    <h2 class="text-4xl md:text-5xl font-bold mb-3">Ready for a sparkling home?</h2>
+    <p class="text-pink-200 text-lg mb-10">Choose how you'd like to get in touch</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center px-6">
+        <a href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20would%20like%20to%20book%20a%20clean%20with%20you" target="_blank" class="btn wa text-base px-8 py-4">
+            <i class="fab fa-whatsapp text-xl"></i> WhatsApp Me
+        </a>
+        <a href="https://cal.com/hey-tricleans" target="_blank" class="btn cal text-base px-8 py-4" style="background:#7c3aed;">
+            <i class="fas fa-calendar-check text-base"></i> Book Online
+        </a>
+        <a href="tel:+447786817644" class="btn ghost text-base px-8 py-4">
+            <i class="fas fa-phone text-base"></i> Call Me
+        </a>
+    </div>
+    <p class="mt-8 text-pink-200 text-sm">Or email: <a href="mailto:heytri33@gmail.com" class="underline text-white font-medium hover:text-pink-100 transition-colors">heytri33@gmail.com</a></p>
+</section>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer class="bg-gray-900 text-white py-12 text-center">
+    <a href="#" class="logo-mark text-4xl"><span class="l-hey">hey__tri</span><span class="l-cleans"> cleans</span></a>
+    <p class="mt-2 text-gray-400 text-sm">Professional · Friendly · Local to Peckham, Dulwich &amp; Camberwell</p>
+    <div class="mt-6 flex flex-wrap justify-center gap-5 text-sm">
+        <a href="mailto:heytri33@gmail.com" class="flex items-center gap-2 text-pink-400 hover:text-pink-300 transition-colors font-medium">
+            <i class="fas fa-envelope"></i> heytri33@gmail.com
+        </a>
+        <span class="text-gray-700 hidden sm:inline">·</span>
+        <a href="tel:+447786817644" class="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors font-medium">
+            <i class="fas fa-phone"></i> +44 7786 817644
+        </a>
+        <span class="text-gray-700 hidden sm:inline">·</span>
+        <a href="https://cal.com/hey-tricleans" target="_blank" class="flex items-center gap-2 text-violet-400 hover:text-violet-300 transition-colors font-medium">
+            <i class="fas fa-calendar-check"></i> Book Online
+        </a>
+    </div>
+    <div class="flex justify-center gap-8 mt-8 text-2xl text-gray-500">
+        <a href="https://www.tiktok.com/@hey__tri" target="_blank" class="hover:text-pink-400 transition-colors"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/@hey__tri" target="_blank" class="hover:text-pink-400 transition-colors"><i class="fab fa-youtube"></i></a>
+        <a href="#" target="_blank" class="hover:text-pink-400 transition-colors"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/hey__tri" target="_blank" class="hover:text-pink-400 transition-colors"><i class="fab fa-x-twitter"></i></a>
+    </div>
+    <p class="text-xs mt-10 text-gray-600">© 2026 hey__tri cleans</p>
+</footer>
+
+<!-- ══════════════════ WA WIDGET ══════════════════ -->
+<div id="wa-widget">
+    <div id="wa-chat-box">
+        <div id="wa-chat-header">
+            <div class="wa-avatar">T</div>
+            <div>
+                <p class="wa-name">hey__tri cleans</p>
+                <p class="wa-status">💬 Typically replies in minutes</p>
+            </div>
+            <button id="wa-close-btn" onclick="toggleWaChat()" aria-label="Close">✕</button>
+        </div>
+        <div id="wa-chat-body">
+            <div class="wa-bubble">
+                Hi there! 👋 I'm Tri, your local cleaner in Peckham, Dulwich &amp; Camberwell.<br><br>
+                How would you like to get in touch?
+                <div class="wa-time">Just now</div>
+            </div>
+        </div>
+        <div class="wa-btns">
+            <p class="wa-section-label">Message me</p>
+            <a class="wa-btn wa-q" href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I'd%20like%20to%20book%20a%20clean%20%F0%9F%A7%B9" target="_blank">🧹 Book a clean</a>
+            <a class="wa-btn wa-q" href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20need%20an%20Airbnb%20turnover%20clean%20%F0%9F%A0%8F" target="_blank">🏠 Airbnb turnover</a>
+            <a class="wa-btn wa-q" href="https://wa.me/447786817644?text=Hi%20Tri%2C%20I%20have%20a%20question%20about%20your%20services" target="_blank">❓ Ask a question</a>
+            <p class="wa-section-label" style="margin-top:4px;">Other ways</p>
+            <a class="wa-btn wa-cal" href="https://cal.com/hey-tricleans" target="_blank">📅 Book via calendar</a>
+            <a class="wa-btn wa-call" href="tel:+447786817644">📞 Call +44 7786 817644</a>
+        </div>
+    </div>
+    <button id="wa-toggle" onclick="toggleWaChat()" aria-label="Open contact options">
+        <span id="wa-badge">1</span>
+        <i class="fab fa-whatsapp text-white" id="wa-icon-open" style="font-size:30px;"></i>
+        <i class="fas fa-xmark text-white" id="wa-icon-close" style="font-size:24px; display:none;"></i>
+    </button>
+</div>
+
+<script>
+    /* ── CAROUSEL ── */
+    function scrollCarousel(offset) {
+        document.getElementById('carousel').scrollBy({ left: offset, behavior: 'smooth' });
+    }
+
+    /* ── MOBILE MENU ── */
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('mob-btn').querySelector('i');
+        menu.classList.toggle('hidden');
+        icon.className = menu.classList.contains('hidden') ? 'fas fa-bars' : 'fas fa-xmark';
+    }
+
+    /* ── WA WIDGET ── */
+    let waOpen = false;
+    function toggleWaChat() {
+        waOpen = !waOpen;
+        const box      = document.getElementById('wa-chat-box');
+        const iconOpen = document.getElementById('wa-icon-open');
+        const iconClose= document.getElementById('wa-icon-close');
+        const badge    = document.getElementById('wa-badge');
+        if (waOpen) {
+            box.classList.add('open');
+            iconOpen.style.display = 'none';
+            iconClose.style.display = 'block';
+            badge.style.display = 'none';
+        } else {
+            box.classList.remove('open');
+            iconOpen.style.display = 'block';
+            iconClose.style.display = 'none';
         }
+    }
 
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            const btn = document.getElementById('mobile-menu-btn');
-            const icon = btn.querySelector('i');
-            menu.classList.toggle('hidden');
-            if (menu.classList.contains('hidden')) {
-                icon.className = 'fas fa-bars';
-            } else {
-                icon.className = 'fas fa-xmark';
-            }
+    /* Auto-open after 8 s on first visit */
+    setTimeout(() => {
+        if (!waOpen && !sessionStorage.getItem('wa-opened')) {
+            toggleWaChat();
+            sessionStorage.setItem('wa-opened', '1');
         }
+    }, 8000);
 
-        let waChatOpen = false;
-        function toggleWaChat() {
-            waChatOpen = !waChatOpen;
-            const box = document.getElementById('wa-chat-box');
-            const iconOpen = document.getElementById('wa-icon-open');
-            const iconClose = document.getElementById('wa-icon-close');
-            const badge = document.getElementById('wa-badge');
-
-            if (waChatOpen) {
-                box.classList.add('open');
-                iconOpen.style.display = 'none';
-                iconClose.style.display = 'block';
-                badge.style.display = 'none';
-            } else {
-                box.classList.remove('open');
-                iconOpen.style.display = 'block';
-                iconClose.style.display = 'none';
-            }
-        }
-
-        // Auto-open chat after 8 seconds on first visit
-        setTimeout(() => {
-            if (!waChatOpen && !sessionStorage.getItem('wa-opened')) {
-                toggleWaChat();
-                sessionStorage.setItem('wa-opened', '1');
-            }
-        }, 8000);
-
-        // Tailwind config
-        tailwind.config = {
-            content: ["*"],
-            theme: {
-                extend: {
-                    colors: {
-                        orange: {
-                            600: '#ea580c',
-                            700: '#c2410c'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    tailwind.config = { content: ["*"] };
+</script>
 </body>
 </html>
